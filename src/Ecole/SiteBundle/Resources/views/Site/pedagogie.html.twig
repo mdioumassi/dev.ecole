@@ -1,0 +1,42 @@
+{% extends "EcoleSiteBundle::layout.html.twig" %}
+ 
+   {% block  content %}
+      <div class="row">
+        <div class="col-sm-12"> 
+            <h4 class="titre green">Projet pédagogique</h4>
+            <div id="contenu">
+                <div class="w3-container">
+                    <h3>Projet</h3>
+                    <p>
+                        A car is a wheeled, self-powered motor vehicle used for transportation.
+                        Most definitions of the term specify that cars are designed to run primarily on roads,
+                        to have seating for one to eight people, to typically have for one to eight people,
+                        to typically have four wheels. (Wikipedia)
+                    </p>
+                 </div>
+            </div>
+            </div> 
+      </div>    
+   {% endblock %}  
+   {% block sidebar %}
+         <h4 class="titre yellow"><span class="glyphicon glyphicon-book"></span>&nbsp;&nbsp;Notre Ecole</h4>
+            <div id="menu">
+              <ul class="w3-ul w3-large">
+                   <li class="select"><a href="{{path('ecole_site_presentation')}}">Présention</a></li>
+                   <li><a href="{{path('ecole_site_pedagogie')}}"><span class="activeMenu">Projet pédagogique</span></a></li>
+                   <li><a href="{{path('ecole_site_primaire')}}">Cellule'Primaire</a></li>
+                   <li><a href="{{path('ecole_site_college')}}">Cellule'Collège</a></li>
+                   <li><a href="{{path('ecole_site_lycee')}}">Cellule'Lycée</a></li>
+               </ul>
+           </div>
+     {% endblock %}  
+     {% block javascript %}     
+         <script>
+             $(function(){
+                $('#myNavbar #notrecole').addClass('active');
+                $('#myNavbar #home').removeClass('active');
+             });
+         </script>
+     {% endblock %}
+     
+

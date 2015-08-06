@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Cellule Du Savoir{% endblock %}</title>
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,500italic,700' rel='stylesheet' type='text/css'>
+         <!-- Latest compiled and minified CSS -->
+        
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{asset('bundles/ecolesite/css/bootstrap.css')}}">
+            <link rel="stylesheet" href="{{asset('bundles/ecolesite/css/w3.css')}}">
+            <link rel="stylesheet" href="{{asset('bundles/ecolesite/css/style.css')}}">
+        {% endblock %}
+        
+        {% javascripts '@EcoleSiteBundle/Resources/public/js/*' %}
+            <script type="text/javascript" src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <div id="fb-root"></div>
+        <div id="fb-root"></div>
+         <script>(function(d, s, id) {
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) return;
+         js = d.createElement(s); js.id = id;
+         
+         js.src = "//connect.facebook.net/fr_FR/all.js#xfbml=1";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));</script>
+    
+         <script type="text/javascript"><!--
+        jQuery.fn.newsTicker = jQuery.fn.newsticker = function(delay)
+        {
+                return this.each(
+                        function()
+                        {
+                                if(this.nodeName.toLowerCase()!= "ul") return;
+                                delay = delay || 4000;
+                                var self = this;
+                                self.items = jQuery("li", self);
+                                // hide all items (except first one)
+                                self.items.not(":eq(0)").hide().end();
+                                // current item
+                                self.currentitem = 0;
+                                var doTick = function()
+                                {
+                                        jQuery.newsticker(self);
+                                }
+                                setInterval(doTick,delay);
+                        }
+                )
+                .addClass("newsticker")
+                .hover(
+                        function()
+                        {
+                                // pause if hovered over
+                                this.pause = true;
+                        },
+                        function()
+                        {
+                                // unpause when not hovered over
+                                this.pause = false;
+                        }
+                );
+        }
+        jQuery.newsticker = function(el)
+        {
+                // return if hovered over
+                if(el.pause) return;
+                // hide current item
+                jQuery(el.items[el.currentitem]).fadeOut("slow",
+                        function()
+                        {
+                                jQuery(this).hide();
+                                // move to next item and show
+                                el.currentitem = ++el.currentitem % (el.items.size());
+                                jQuery(el.items[el.currentitem]).fadeIn("slow");
+                        }
+                );
+        }
+
+        $(document).ready(
+                function()
+                {
+                        $("#news").newsTicker();
+                }
+        );
+// --></script>
+  
+    </head>
+    <body>
+        <div id="GrandeIntro"></div>
+        <div id="siteWrapper">
+            <header>
+              <div id="headerTop"></div>
+                <div id="Grandenavigation">
+                    <nav class="navbar navbar-inverse green">
+                      <div class="navbar-header">
+                        <a class="navbar-brand" href="{{path('ecole_site_homepage')}}">Cellule Du Savoir</a>
+                      </div>
+                      <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav green">
+                          <li class="active" id="home"><a href="{{path('ecole_site_homepage')}}"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Accueil</a></li>
+                          <li id="notrecole" class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-book"></span>&nbsp;&nbsp;Notre Ecole <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                              <li><a href="{{path('ecole_site_presentation')}}">Présentation</a></li>
+                              <li><a href="{{path('ecole_site_pedagogie')}}">Projet pédagogique</a></li>
+                              <li><a href="{{path('ecole_site_primaire')}}">Cellule'Primaire</a></li>
+                              <li><a href="{{path('ecole_site_college')}}">Cellule'Collège</a></li>
+                              <li><a href="{{path('ecole_site_lycee')}}">Cellule'Lycée</a></li>
+                            </ul>
+                          </li>
+                          <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-bookmark"></span>&nbsp;&nbsp;Notre projet éducatif <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Qualité de l'enseignement</a></li>
+                                <li><a href="#">Parents & L'école</a></li>
+                                <li><a href="#">Suivi & Orientation</a>i</li>
+                            </ul>
+                          </li>
+                            <li id="contact"><a href="{{path('ecole_site_contact')}}"><span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;Nous contacter</a></li>
+                        </ul>
+                      </div>
+                  </nav>
+                </div>
+            </header>
+            <section id="content">
+              {% block body %}{% endblock %} 
+            </section>
+           <footer class="w3-container green">
+            <p>Footer information goes here</p>
+          </footer>
+        </div>
+        {% block javascripts %}
+            <script>
+            var header = document.querySelector("#siteWrapper header");
+                function scrolled(){
+                        var windowHeight = document.body.clientHeight,
+                                currentScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                        header.className = (currentScroll >= windowHeight - header.offsetHeight)/2 ? "fixed" : "";
+                }
+                addEventListener("scroll", scrolled, false);
+            </script>
+        {% endblock %}
+    </body>
+</html>

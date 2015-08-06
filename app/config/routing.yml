@@ -1,0 +1,3 @@
+ecole_site:
+    resource: "@EcoleSiteBundle/Resources/config/routing.yml"
+    prefix:   /

@@ -1,0 +1,64 @@
+{% extends "EcoleSiteBundle::layout.html.twig" %}
+ 
+    {% block  content %}
+       <div class="row">
+            <div class="col-sm-12"> 
+            <h4 class="titre green"><span class="glyphicon glyphicon-envelope"></span> Contact</h4>
+            <div id="contenu">
+               
+            </div>
+        </div> 
+       </div>
+       <div class="row"><br>
+        <div class="col-sm-12"> 
+            <h4 class="titre green"><span class="glyphicon glyphicon-envelope"></span>&nbsp;Formulaire de Contact</h4>
+            <div id="contenu">
+                <form class="w3-container w3-card-2" method="POST" action="{{path('ecole_site_contact')}} {{ form_enctype(form) }}">
+                    <div class="w3-group">      
+                        {{ form_widget(form.nom, {'attr': {'class': 'w3-input', 'style':'width:90%'}}) }}
+                        {{ form_label(form.nom, 'Votre nom', {'label_attr': {'class': 'w3-label'}}) }}
+                    </div>
+                     <div class="w3-group">      
+                        {{ form_widget(form.email, {'attr': {'class': 'w3-input', 'style':'width:90%'}}) }}
+                        {{ form_label(form.email, 'Votre email', {'label_attr': {'class': 'w3-label'}}) }}
+                      </div>
+                    <div class="w3-group">      
+                        {{ form_widget(form.objet, {'attr': {'class': 'w3-input', 'style':'width:90%'}}) }}
+                        {{ form_label(form.objet, 'Votre objet', {'label_attr': {'class': 'w3-label'}}) }}
+                      </div>
+                      <div class="w3-group">      
+                        {{ form_widget(form.message, {'attr': {'class': 'w3-input', 'style':'width:90%'}}) }}
+                        {{ form_label(form.message, 'Votre message', {'label_attr': {'class': 'w3-label'}}) }}
+                      </div>
+                    <button class="w3-btn teal" type="submit">Envoyer</button>
+                </form>
+            </div>
+        </div>         
+      </div>
+   {% endblock %}  
+   {% block sidebar %}
+        <h4 class="titre yellow">Cellule'RESEAUX</h4>
+        <div id="menu">
+             <div class="w3-container">
+                <div class="fb-like-box" data-href="https://www.facebook.com/pages/Cellule-du-Savoir/448685748623613" data-width="250" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>
+            </div>
+        </div>
+        <br>
+        <h4 class="titre yellow">Cellule'Localisation</h4>
+        <div id="contenu">
+
+        </div>
+        <br>
+        <h4 class="titre yellow">Cellule'Coordonnées</h4>
+        <div id="menu">
+
+        </div>
+     {% endblock %}  
+       {% block javascript %}     
+         <script>
+             $(function(){
+                $('#myNavbar #contact').addClass('active');
+                $('#myNavbar #home').removeClass('active');
+             });
+         </script>
+     {% endblock %}

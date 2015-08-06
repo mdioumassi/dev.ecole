@@ -1,0 +1,131 @@
+html, body {height:100%;margin:0;}
+#GrandeIntro {height:100%;background:url(http://www.hdwallpapersplus.com/wp-content/uploads/2012/10/Opera-Background-Blue-Swirls1.jpg) no-repeat;background-size:cover;}
+#siteWrapper {margin-top:-55px;}
+#siteWrapper header.fixed {position:fixed;width:100%;top:0;left:0;z-index: 100}
+#siteWrapper header.fixed+#content {margin-top:80px;}
+
+
+#page{
+ 
+    margin-left:auto;
+    margin-right:auto;
+}
+.navbar-brand{
+    margin-left: 85px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+}
+#news {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 16px;
+    border:1px solid red;
+}
+#news li a{
+    text-decoration: none;
+}
+.fb-like-box{
+    margin-left: -15px;
+}
+.dropdown-menu > li > a:focus, .dropdown-menu > li > a:hover {
+    color: #262626;
+    text-decoration: none;
+    background-color: #CF0000;
+}
+.contentRight{
+    border:1px solid #5CBF3B;
+    padding-top: 10px; 
+    margin-top: -10px;
+    margin-left: -2px;
+ }
+
+.navbar-right {
+    margin-top:-10px;
+}
+.navbar{
+  
+    z-index: 100;
+    border-radius: 0px;
+}
+.navbar-collapse{
+   padding-left:455px;
+}
+#myNavbar{
+   width: 1400px;
+   font-size: 16px;
+   font-weight: bold;
+}
+.celluleLeft{
+   border-top-right-radius: 15px;
+   border-bottom-left-radius: 15px;
+   width: 710px;
+   height: 688px;
+   border: 1px solid #009900;
+   padding:10px;
+}
+.celluleRight{
+     border-top-right-radius: 15px;
+   border: 1px solid #009900;
+   padding:10px;
+   width: 295px;
+   margin-left: 11px;
+}
+footer{
+    position: relative;
+    bottom: 0;   
+}
+.activeMenu{
+    text-decoration: none;
+    color:#CF0000;
+}
+.info{
+    border: 1px solid #009900;
+    width: 487px;
+}
+.titre{
+    background-color: #009900;
+    border-top-right-radius: 15px;
+    padding-top: 10px;
+    padding:10px;
+    margin-left: -2px;
+    margin-top:0px;
+    color: #fff;
+    font-weight: bold;
+}
+#contenu{
+    border:1px solid #009900; 
+    padding: 10px;
+    margin-top: -14px;
+    margin-left: -2px;
+    border-bottom-left-radius: 15px;
+    padding-bottom: 5px;
+}
+#menu{
+    border:1px solid #009900; 
+    padding: 10px;
+    margin-top: -14px;
+    margin-left: -2px;
+    border-bottom-left-radius: 15px;
+    padding-bottom: 5px;
+}
+.green{
+    color: #fff !important;
+}
+.navbar-inverse .navbar-nav>li>a {
+  color: #FFF;
+}
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover {
+    color: #FFF;
+    background-color: #080808;
+}
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover {
+    color: #FFF;
+    background-color: red;
+}
+/*#contenu{
+   border:1px solid #009900;
+   margin-top: -10px;
+   padding: 10px;
+   border-bottom-left-radius: 15px
+}*/

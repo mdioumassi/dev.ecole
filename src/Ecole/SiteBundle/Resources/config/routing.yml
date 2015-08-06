@@ -1,0 +1,34 @@
+ecole_site_homepage:
+    path:     /
+    defaults: { _controller: EcoleSiteBundle:Site:index }
+
+ecole_site_actualite:
+    path:     /actualite
+    defaults: { _controller: EcoleSiteBundle:Site:actualite }
+
+ecole_site_presentation:
+    path:     /presentation
+    defaults: { _controller: EcoleSiteBundle:Site:presentation }
+
+ecole_site_pedagogie:
+    path:     /pedagogie
+    defaults: { _controller: EcoleSiteBundle:Site:pedagogie }
+    
+ecole_site_primaire:
+    path:     /primaire
+    defaults: { _controller: EcoleSiteBundle:Site:primaire }
+
+ecole_site_college:
+    path:     /college
+    defaults: { _controller: EcoleSiteBundle:Site:college }
+    
+ecole_site_lycee:
+    path:     /lycee
+    defaults: { _controller: EcoleSiteBundle:Site:lycee }
+
+
+ecole_site_contact:
+    path:     /contact
+    defaults: { _controller: EcoleSiteBundle:Site:contact}
+    requirements:
+        _method: POST|GET
