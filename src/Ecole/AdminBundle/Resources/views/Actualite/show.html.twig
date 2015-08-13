@@ -1,0 +1,52 @@
+{% extends "EcoleAdminBundle::layout.html.twig" %}
+
+{% block content -%}
+    <div class="w3-container">
+    <ul class="nav nav-tabs">
+       <li   class="active"><a href="#">Voir</a></li>
+       <li><a href="{{ path('actualite_edit', { 'id': entity.id }) }}">Modifier</a></li>
+    </ul>
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Titre</th>
+                <td>{{ entity.titre }}</td>
+            </tr>
+            <tr>
+                <th>Contenu</th>
+                <td>{{ entity.contenu }}</td>
+            </tr>
+            <tr>
+                <th>Timestamp</th>
+                <td>{{ entity.timestamp }}</td>
+            </tr>
+            <tr>
+                <th>Path</th>
+                <td>{{ entity.path }}</td>
+            </tr>
+            <tr>
+                <th>Active</th>
+                <td>{{ entity.active }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('actualite') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('actualite_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+    </div>
+{% endblock %}

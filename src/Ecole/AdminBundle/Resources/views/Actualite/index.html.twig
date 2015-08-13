@@ -1,0 +1,54 @@
+{% extends "EcoleAdminBundle::layout.html.twig" %}
+
+{% block content -%}
+     <h4 class="titre red"><span class="glyphicon glyphicon-tags"></span>&nbsp;&nbsp;Cellule'ACTU</h4>
+        <div id="contenu" style="border-color:red">
+            <div class="w3-container">
+                {% for entity in entities %}
+                    <ul class="nav nav-tabs">
+                       <li class="active"><a href="{{ path('actualite_show', { 'id': entity.id }) }}">Voir</a></li>
+                       <li><a href="{{ path('actualite_edit', { 'id': entity.id }) }}">Modifier</a></li>
+                    </ul>
+                    <table class="record_properties w3-border-bottom w3-border-left w3-border-right" style="margin-bottom: 10px">
+                       <tbody>
+                           <tr>
+                               <th>Titre</th>
+                               <td>{{ entity.titre }}</td>
+                           </tr>
+                           <tr>
+                               <th>Contenu</th>
+                               <td>{{ entity.contenu }}</td>
+                           </tr>
+                           <tr>
+                               <th>Date<T/th>
+                               <td>{{ entity.timestamp }}</td>
+                           </tr>
+                           <tr>
+                               <th>Path</th>
+                               <td>{{ entity.path }}</td>
+                           </tr>
+                           <tr>
+                               <th>Active</th>
+                               <td>{{ entity.active }}</td>
+                           </tr>
+                       </tbody>
+                     </table>
+                  {% endfor %}
+            </div>
+       <ul>
+        <li>
+            <a href="{{ path('actualite_new') }}">
+                Create a new entry
+            </a>
+        </li>
+       </ul>
+   </div>
+  {% endblock %}
+  {% block javascript %}     
+         <script>
+             $(function(){
+                $('#myNavbar #actualite').addClass('active');
+                $('#myNavbar #home').removeClass('active');
+             });
+         </script>
+     {% endblock %}

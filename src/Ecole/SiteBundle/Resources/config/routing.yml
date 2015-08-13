@@ -32,3 +32,7 @@ ecole_site_contact:
     defaults: { _controller: EcoleSiteBundle:Site:contact}
     requirements:
         _method: POST|GET
+     
+ecole_site_actualite:
+    path:     /actualite
+    defaults: { _controller: EcoleSiteBundle:Site:actualite}

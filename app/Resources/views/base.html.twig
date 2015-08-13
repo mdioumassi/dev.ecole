@@ -33,7 +33,7 @@
     </head>
     <body>
         <div id="GrandeIntro">
-            <div class="row" style="border:1px solid green">
+            <div class="row" style=" width: 100%">
                 <div class="col-sm-3" style="padding-top: 17px">
                     <div class="w3-image">
                         <a href=""><img src="{{asset('bundles/ecolesite/images/logo.gif')}}" style="width:100%"></a>
@@ -50,7 +50,7 @@
                       <div class="navbar-header">
                         <a class="navbar-brand" href="{{path('ecole_site_homepage')}}">Cellule Du Savoir</a>
                       </div>
-                      <div class="collapse navbar-collapse" id="myNavbar">
+                      <div  id="myNavbar">
                         <ul class="nav navbar-nav green">
                           <li class="active" id="home"><a href="{{path('ecole_site_homepage')}}"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Accueil</a></li>
                           <li id="notrecole" class="dropdown">
@@ -71,7 +71,8 @@
                                 <li><a href="#">Suivi & Orientation</a>i</li>
                             </ul>
                           </li>
-                            <li id="contact"><a href="{{path('ecole_site_contact')}}"><span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;Nous contacter</a></li>
+                          <li id="actualite"><a href="{{path('ecole_site_actualite')}}"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;&nbsp;Actualité</a></li>
+                          <li id="contact"><a href="{{path('ecole_site_contact')}}"><span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;Nous contacter</a></li>
                         </ul>
                       </div>
                   </nav>

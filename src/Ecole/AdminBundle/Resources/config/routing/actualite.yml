@@ -1,0 +1,30 @@
+actualite:
+    path:     /
+    defaults: { _controller: "EcoleAdminBundle:Actualite:index" }
+
+actualite_show:
+    path:     /{id}/show
+    defaults: { _controller: "EcoleAdminBundle:Actualite:show" }
+
+actualite_new:
+    path:     /new
+    defaults: { _controller: "EcoleAdminBundle:Actualite:new" }
+
+actualite_create:
+    path:     /create
+    defaults: { _controller: "EcoleAdminBundle:Actualite:create" }
+    methods:  POST
+
+actualite_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "EcoleAdminBundle:Actualite:edit" }
+
+actualite_update:
+    path:     /{id}/update
+    defaults: { _controller: "EcoleAdminBundle:Actualite:update" }
+    methods:  [POST, PUT]
+
+actualite_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "EcoleAdminBundle:Actualite:delete" }
+    methods:  [POST, DELETE]

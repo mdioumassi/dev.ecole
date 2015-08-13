@@ -1,0 +1,20 @@
+{% extends "EcoleAdminBundle::layout.html.twig" %}
+
+{% block content -%}
+    <div class="w3-container">
+         <ul class="nav nav-tabs">
+            <li><a href="{{ path('actualite_show', { 'id': entity.id }) }}">Voir</a></li>
+            <li  class="active"><a href="{{ path('actualite_edit', { 'id': entity.id }) }}">Modifier</a></li>
+          </ul>
+    {{ form(edit_form) }}
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('actualite') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+    </div>
+{% endblock %}

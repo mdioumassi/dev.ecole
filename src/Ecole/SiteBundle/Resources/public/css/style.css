@@ -1,7 +1,7 @@
 html, body {height:100%;margin:0;}
 #GrandeIntro {height:33%;}
-#siteWrapper {margin-top:-55px;}
-#siteWrapper header.fixed {position:fixed;width:100%;top:0;left:0;z-index: 100}
+#siteWrapper {margin-top:-62px; width: 100%;margin-left: auto;margin-right: auto; }
+#siteWrapper header.fixed {position:fixed;width: 100%;top:0;left:0;z-index: 100}
 #siteWrapper header.fixed+#content {margin-top:80px;}
 
 .navbar-brand{
@@ -38,17 +38,23 @@ html, body {height:100%;margin:0;}
     margin-top:-10px;
 }
 .navbar{
-  
     z-index: 100;
     border-radius: 0px;
 }
 .navbar-collapse{
-   padding-left:455px;
+   width: 100%;
+   border:1px solid red;
+   display: none;
+   padding-left:327px;
 }
-#myNavbar{
-   width: 1400px;
+
+.navbar-nav{
+    margin-left: 23px;
    font-size: 16px;
    font-weight: bold;
+}
+.navbar.navbar-inverse{
+       
 }
 .celluleLeft{
    border-top-right-radius: 15px;
@@ -59,7 +65,7 @@ html, body {height:100%;margin:0;}
    padding:10px;
 }
 .celluleRight{
-     border-top-right-radius: 15px;
+   border-top-right-radius: 15px;
    border: 1px solid #009900;
    padding:10px;
    width: 295px;
@@ -73,10 +79,7 @@ footer{
     text-decoration: none;
     color:#CF0000;
 }
-.info{
-    border: 1px solid #009900;
-    width: 487px;
-}
+
 .titre{
     background-color: #009900;
     border-top-right-radius: 15px;
@@ -96,7 +99,7 @@ footer{
     padding-bottom: 5px;
 }
 #menu{
-    border:1px solid #009900; 
+    border:2px solid yellow; 
     padding: 10px;
     margin-top: -14px;
     margin-left: -2px;

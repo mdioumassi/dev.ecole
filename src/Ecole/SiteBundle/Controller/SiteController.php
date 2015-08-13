@@ -40,10 +40,7 @@ class SiteController extends Controller
     {
         return $this->render('EcoleSiteBundle:Site:lycee.html.twig');
     }
-     
-    /*public function contactAction(){
-         return $this->render('EcoleSiteBundle:Site:contact.html.twig');
-    }*/
+
     
     public function contactAction(Request $request)
     {
