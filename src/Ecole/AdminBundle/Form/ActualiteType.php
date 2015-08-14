@@ -17,9 +17,9 @@ class ActualiteType extends AbstractType
         $builder
             ->add('titre')
             ->add('contenu')
-            ->add('timestamp')
-            ->add('path')
+            ->add('timestamp','hidden',array('data' => time()))
             ->add('active')
+            //->add('path')
         ;
     }
     

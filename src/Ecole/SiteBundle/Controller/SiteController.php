@@ -5,11 +5,15 @@ namespace Ecole\SiteBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
+use Ecole\AdminBundle\Entity\Actualite;
+
 class SiteController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('EcoleSiteBundle:Site:index.html.twig');
+        return $this->render('EcoleSiteBundle:Site:index.html.twig',array(
+            'actualite'=>$this->getActualite()
+        ));;
     }
     
     public function actualiteAction()
@@ -69,5 +73,15 @@ class SiteController extends Controller
             'form'=>$form->createView(),
         ));
        //
+    }
+    
+     private function getActualite(){
+	$em = $this->getDoctrine()->getEntityManager();
+	$query = $em->createQuery(
+	 'SELECT a FROM EcoleAdminBundle:Actualite a
+	  ORDER BY a.timestamp DESC
+    '
+	)->setMaxResults(2);
+	 return $query->getResult();
     }
 }

@@ -1,20 +1,46 @@
 {% extends "EcoleAdminBundle::layout.html.twig" %}
 
 {% block content -%}
-    <div class="w3-container">
-         <ul class="nav nav-tabs">
-            <li><a href="{{ path('actualite_show', { 'id': entity.id }) }}">Voir</a></li>
-            <li  class="active"><a href="{{ path('actualite_edit', { 'id': entity.id }) }}">Modifier</a></li>
-          </ul>
-    {{ form(edit_form) }}
-
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('actualite') }}">
-            Back to the list
-        </a>
-    </li>
-    <li>{{ form(delete_form) }}</li>
-</ul>
-    </div>
+    <h4 class="titre red"><span class="glyphicon glyphicon-tags"></span>&nbsp;&nbsp;Cellule'ACTU</h4>
+        <div id="contenu" style="border-color:red">
+            <div class="w3-container">
+                 <ul class="nav nav-tabs">
+                    <li><a href="{{ path('actualite_show', { 'id': entity.id }) }}">Voir</a></li>
+                    <li  class="active"><a href="{{ path('actualite_edit', { 'id': entity.id }) }}">Modifier</a></li>
+                  </ul>
+                  <table class="w3-border-bottom w3-border-left w3-border-right" style="margin-bottom: 10px">
+                      <tr>
+                          <td>
+                            {{ form(edit_form) }}
+                          </td>
+                      </tr>
+                  </table>
+                <ul class="record_actions">
+            <li>
+                <a href="{{ path('actualite') }}">
+                    Back to the list
+                </a>
+            </li>
+            <li>{{ form(delete_form) }}</li>
+        </ul>
+            </div>
+        </div>
+{% endblock %}
+{% block sidebar %}
+        <h4 class="titre yellow">Administration</h4>
+        <div id="menu">
+            <ul class="w3-ul w3-large">
+                   <li class="select"><a href="{{path('actualite')}}">Gestion actualité</a></li>
+                  
+               </ul>
+        </div>
+        
+     {% endblock %}  
+{% block javascript %}     
+    <script>
+        $(function(){
+           $('#myNavbar #actualite').addClass('active');
+           $('#myNavbar #home').removeClass('active');
+        });
+    </script>
 {% endblock %}

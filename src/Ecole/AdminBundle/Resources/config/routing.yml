@@ -5,7 +5,3 @@ ecole_admin_actualite:
 ecole_admin_homepage:
     path:     /
     defaults: { _controller: EcoleAdminBundle:Admin:index }
-
-ecole_site_actualite:
-    path:     /actu
-    defaults: { _controller: EcoleSiteBundle:Site:actualite}

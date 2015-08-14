@@ -1,52 +1,55 @@
 {% extends "EcoleAdminBundle::layout.html.twig" %}
 
 {% block content -%}
-    <div class="w3-container">
-    <ul class="nav nav-tabs">
-       <li   class="active"><a href="#">Voir</a></li>
-       <li><a href="{{ path('actualite_edit', { 'id': entity.id }) }}">Modifier</a></li>
-    </ul>
-    <table class="record_properties">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ entity.id }}</td>
-            </tr>
-            <tr>
-                <th>Titre</th>
-                <td>{{ entity.titre }}</td>
-            </tr>
-            <tr>
-                <th>Contenu</th>
-                <td>{{ entity.contenu }}</td>
-            </tr>
-            <tr>
-                <th>Timestamp</th>
-                <td>{{ entity.timestamp }}</td>
-            </tr>
-            <tr>
-                <th>Path</th>
-                <td>{{ entity.path }}</td>
-            </tr>
-            <tr>
-                <th>Active</th>
-                <td>{{ entity.active }}</td>
-            </tr>
-        </tbody>
-    </table>
-
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('actualite') }}">
-            Back to the list
-        </a>
-    </li>
-    <li>
-        <a href="{{ path('actualite_edit', { 'id': entity.id }) }}">
-            Edit
-        </a>
-    </li>
-    <li>{{ form(delete_form) }}</li>
-</ul>
+    <h4 class="titre red"><span class="glyphicon glyphicon-tags"></span>&nbsp;&nbsp;Cellule'ACTU</h4>
+        <div id="contenu" style="border-color:red">
+          <div class="w3-container">
+            <ul class="nav nav-tabs">
+               <li   class="active"><a href="#">Voir</a></li>
+               <li><a href="{{ path('actualite_edit', { 'id': entity.id }) }}">Modifier</a></li>
+            </ul>
+            <table class="record_properties w3-border-bottom w3-border-left w3-border-right" style="margin-bottom: 10px">
+                <tbody>
+                    <tr>
+                        <th>Titre</th>
+                        <td>{{ entity.titre }}</td>
+                    </tr>
+                    <tr>
+                        <th>Contenu</th>
+                        <td>{{ entity.contenu }}</td>
+                    </tr>
+                    <tr>
+                        <th>Date</th>
+                        <td>{{ entity.timestamp|date("m/d/Y") }}</td>
+                    </tr>
+                    <tr>
+                        <th>Active</th>
+                        <td>{{ entity.active }}</td>
+                    </tr>
+                </tbody>
+            </table>
+                <a class="btn btn-primary" href="{{ path('actualite') }}">
+                    Liste des actualités
+                </a>
+            {{ form(delete_form) }}
     </div>
+</div>
+{% endblock %}
+{% block sidebar %}
+        <h4 class="titre yellow">Administration</h4>
+        <div id="menu">
+            <ul class="w3-ul w3-large">
+                   <li class="select"><a href="{{path('actualite')}}">Gestion actualité</a></li>
+                  
+               </ul>
+        </div>
+        
+     {% endblock %}  
+{% block javascript %}     
+    <script>
+        $(function(){
+           $('#myNavbar #actualite').addClass('active');
+           $('#myNavbar #home').removeClass('active');
+        });
+    </script>
 {% endblock %}
