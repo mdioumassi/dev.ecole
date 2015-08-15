@@ -7,8 +7,9 @@
                  <ul class="nav nav-tabs">
                     <li><a href="{{ path('actualite_show', { 'id': entity.id }) }}">Voir</a></li>
                     <li  class="active"><a href="{{ path('actualite_edit', { 'id': entity.id }) }}">Modifier</a></li>
+                    <li><a href="{{path('ecole_admin_homepage')}}">Visualiser</a></li>
                   </ul>
-                  <table class="w3-border-bottom w3-border-left w3-border-right" style="margin-bottom: 10px">
+                  <table class="w3-border-bottom w3-border-left w3-border-right" style="margin-bottom: 10px;background-color: #fff;">
                       <tr>
                           <td>
                             {{ form(edit_form) }}

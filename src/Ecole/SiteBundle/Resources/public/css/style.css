@@ -1,6 +1,6 @@
-html, body {height:100%;margin:0; background-color: #FFFFD6}
-#GrandeIntro {height:31%;}
-#siteWrapper {margin-top:-62px; width: 100%;margin-left: auto;margin-right: auto; }
+html, body {height:100%;margin:0; background-color: #FFFFE0}
+#GrandeIntro {height:33%;}
+#siteWrapper {margin-top:-70px;width: 100%;margin-left: auto;margin-right: auto; }
 #siteWrapper header.fixed {position:fixed;width: 100%;top:0;left:0;z-index: 100}
 #siteWrapper header.fixed+#content {margin-top:80px;}
 
@@ -85,6 +85,7 @@ footer{
     border-top-right-radius: 15px;
     padding-top: 10px;
     padding:10px;
+    font-size: 16px;
     margin-left: -2px;
     margin-top:0px;
     color: #fff;

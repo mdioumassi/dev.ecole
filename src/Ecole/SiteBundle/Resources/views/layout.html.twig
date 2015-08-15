@@ -1,28 +1,17 @@
 {% extends '::base.html.twig' %}
 
 {% block  body %}
-      <div class="row" style="
-           margin-top: -12px;
-           margin-bottom: 10px;
-           width: 1016px; 
-           margin-left: 100px;
-           box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7),
-            -1px 2px 20px rgb(51, 204, 51) inset; 
-             border-top-right-radius: 15px;
-              border-bottom-left-radius: 15px;">
-          <div class="col-sm-8 celluleLeft">
+      <div class="row" style="margin-left: 3px">
+          <div class="col-xs-3"  style="border: 1px solid green;padding-left:10px; width: 290px">
+            {% block sidebar_first %}{% endblock %}
+          </div>
+          <div class="col-xs-6" style="border: 1px solid green;margin-left: 5px; margin-right: 5px;">
             {% block content %}{% endblock %}
           </div>
           
-          <div class="col-sm-4 celluleRight">
-            {% block sidebar %}{% endblock %}
+          <div class="col-xs-3"  style="border: 1px solid green;width: 290px">
+            {% block sidebar_second %}{% endblock %}
           </div>
       </div>
-      {% block javascript %}     
-         <script>
-             $(function(){
 
-             });
-         </script>
-     {% endblock %}
 {% endblock %}

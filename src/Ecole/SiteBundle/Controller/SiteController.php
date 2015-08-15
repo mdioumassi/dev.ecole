@@ -13,12 +13,14 @@ class SiteController extends Controller
     {
         return $this->render('EcoleSiteBundle:Site:index.html.twig',array(
             'actualite'=>$this->getActualite()
-        ));;
+        ));
     }
     
     public function actualiteAction()
     {
-        return $this->render('EcoleSiteBundle:Site:actualite.html.twig');
+        return $this->render('EcoleSiteBundle:Site:actualite.html.twig',array(
+            'actualite'=>$this->getAllActualite()
+        ));
     }
     public function presentationAction()
     {
@@ -79,9 +81,21 @@ class SiteController extends Controller
 	$em = $this->getDoctrine()->getEntityManager();
 	$query = $em->createQuery(
 	 'SELECT a FROM EcoleAdminBundle:Actualite a
+          WHERE a.active=1
 	  ORDER BY a.timestamp DESC
     '
 	)->setMaxResults(2);
+	 return $query->getResult();
+    }
+    
+     private function getAllActualite(){
+	$em = $this->getDoctrine()->getEntityManager();
+	$query = $em->createQuery(
+	 'SELECT a FROM EcoleAdminBundle:Actualite a
+          WHERE a.active=1
+	  ORDER BY a.timestamp DESC
+    '
+	);//->setMaxResults(2);
 	 return $query->getResult();
     }
 }
