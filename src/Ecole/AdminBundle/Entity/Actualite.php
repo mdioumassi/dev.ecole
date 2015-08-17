@@ -35,7 +35,7 @@ class Actualite
     private $path;
 
     /**
-     * @var integer
+     * @var boolean
      */
     private $active;
 
@@ -145,7 +145,7 @@ class Actualite
     /**
      * Set active
      *
-     * @param integer $active
+     * @param boolean $active
      * @return Actualite
      */
     public function setActive($active)
@@ -158,7 +158,7 @@ class Actualite
     /**
      * Get active
      *
-     * @return integer 
+     * @return boolean 
      */
     public function getActive()
     {
