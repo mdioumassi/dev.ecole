@@ -1,15 +1,15 @@
 {% extends '::base.html.twig' %}
 
 {% block  body %}
-      <div class="row" style="margin-left: 3px">
-          <div class="col-xs-3"  style="border: 1px solid green;padding-left:10px; width: 290px">
+      <div class="row" style="margin-top: -10px;width: 100%; margin-left: auto; margin-right: auto;padding-left: 5px">
+          <div class="col-xs-3"  style="border: 1px solid green;padding-left:10px; width: 302px;padding-top: 10px">
             {% block sidebar_first %}{% endblock %}
           </div>
-          <div class="col-xs-6" style="border: 1px solid green;margin-left: 5px; margin-right: 5px;">
+          <div class="col-xs-6" style="border: 1px solid green;;width: 658px;margin-left: 5px; margin-right: 5px;padding-top: 10px">
             {% block content %}{% endblock %}
           </div>
           
-          <div class="col-xs-3"  style="border: 1px solid green;width: 290px">
+          <div class="col-xs-3"  style="border: 1px solid green;width: 302px;padding-top: 10px">
             {% block sidebar_second %}{% endblock %}
           </div>
       </div>
