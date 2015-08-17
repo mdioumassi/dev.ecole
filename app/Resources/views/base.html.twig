@@ -97,8 +97,8 @@ $(document).ready(
 // --></script>
     </head>
     <body>
-        <div id="GrandeIntro">
-            <div class="row" style=" width: 100%">
+        <div id="GrandeIntro" style="border:1px solid red">
+            <div class="row">
                 <div class="col-sm-3" style="padding-top: 17px">
                     <div class="w3-image">
                         <a href=""><img src="{{asset('bundles/ecolesite/images/logo.gif')}}" style="width:100%"></a>
@@ -118,7 +118,7 @@ $(document).ready(
         </div>
         <div id="siteWrapper">
             <header>
-                <div id="Grandenavigation">
+            
                     <nav class="navbar navbar-inverse green">
                       <div class="navbar-header">
                         <a class="navbar-brand" href="{{path('ecole_site_homepage')}}">Cellule Du Savoir</a>
@@ -149,7 +149,7 @@ $(document).ready(
                         </ul>
                       </div>
                   </nav>
-                </div>
+            
             </header>
             <section id="content">
               {% block body %}{% endblock %} 
