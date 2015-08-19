@@ -5,16 +5,24 @@
                 <h4 class="titre red"><span class="glyphicon glyphicon-tags"></span>&nbsp;&nbsp;Cellule'ACTU</h4>
                    <div id="contenu" style="border-color:red">
                     {%for actu in actualite %}
-                            <div class="w3-container">
-                                <h4 class="red">{{ actu.titre }} <span style="float: right">Publié le :{{ actu.timestamp|date("d/m/Y") }}<span></h4> 
-                                <p>{{ actu.contenu }}</p>
-                             </div>
-                        {% endfor%} 
-                    </div>
-            </div>
+                      <div class="w3-container w3-card-2">
+                          <h4 class="red">{{ actu.titre }} <span style="float: right">Publié le :{{ actu.timestamp|date("d/m/Y") }}<span></h4> 
+                          <p>{{ actu.contenu }}</p>
+                          </div><br>
+                                  {% endfor%} 
+                   </div>
+           </div>
         </div>
+         {% block javascript %}     
+         <script>
+             $(function(){
+                $('#myNavbar #actualite').addClass('active');
+                $('#myNavbar #home').removeClass('active');
+             });
+         </script>
+     {% endblock %}
    {% endblock %}  
-   {% block sidebar %}
+   {% block sidebar_second %}
         <h4 class="titre yellow">Cellule'RESEAUX</h4>
         <div id="menu">
             <div class="w3-container">
@@ -32,12 +40,5 @@
 
         </div>
      {% endblock %}  
-    {% block javascript %}     
-         <script>
-             $(function(){
-                $('#myNavbar #actualite').addClass('active');
-                $('#myNavbar #home').removeClass('active');
-             });
-         </script>
-     {% endblock %}
+   
      

@@ -1,26 +1,8 @@
 {% extends "EcoleSiteBundle::layout.html.twig" %}
     {% block  content %}
-        <div class="row">
-            <div class="col-sm-12">
-                <h4 class="titre red"><span class="glyphicon glyphicon-tags"></span>&nbsp;&nbsp;Cellule'ACTU</h4>
-                <div id="contenu" style="border-color:red">
-                     {%for actu in actualite %}
-                            <ul id="news">
-                               <li> 
-                           <div class="w3-container">
-                            
-                             <h4 class="red">{{ actu.titre }} <span style="float: right">Publié le :{{ actu.timestamp|date("d/m/Y") }}<span></h4> 
-                             <p>{{ actu.contenu }}</p>
-                          </div>
-                              </li>
-                           </ul>
-                      {% endfor%} 
-                </div>
-            </div>
-        </div><br>
           <div class="row">
             <div class="col-sm-12">
-                <h4 class="titre green"> <span class="glyphicon glyphicon-tags"></span>&nbsp;&nbsp;Cellule du Savoir</h4>
+                <h4 class="titre green"> <span class="glyphicon glyphicon-tags"></span>&nbsp;&nbsp;La Cellule du Savoir</h4>
                  <div id="contenu">
                   <div class="w3-container">
                     <p>
@@ -76,40 +58,104 @@
           </div>
    {% endblock %}
    {% block sidebar_first %}
-        <h4 class="titre yellow">Cellule'RESEAUX</h4>
+        <h4 class="titre yellow">Cellule'Statistique</h4>
         <div id="menu">
             <div class="w3-container">
+             
+            </div>
+        </div>
+        <br>
+          <h4 class="titre red"><span class="glyphicon glyphicon-tags"></span>&nbsp;&nbsp;Cellule'ACTU</h4>
+          <div id="menu"  style="border-color:red">
+          
+           <div class="w3-container w3-card-2" style="height: 71px">
+             <ul  id="news">
+               {%for actu in actualite %}
+                 <li><a href="{{path('ecole_site_actualite')}}"><img src="{{actu.path}}" width="70" height="70" style="margin-left: -16px "/><span>{{actu.titre}}</span></a></li>
+               {% endfor %}
+               </ul>    
+           </div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+        
+          </div>
+          <br>
+
+     {% endblock %}
+     
+   {% block sidebar_second %}
+        <h4 class="titre yellow">Cellule'RESEAUX</h4>
+        <div id="menu">
+            <div class="w3-container w3-padding-bottom">
                 <div class="fb-like-box" data-href="https://www.facebook.com/pages/Cellule-du-Savoir/448685748623613" data-width="250" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>
             </div>
         </div>
         <br>
-        <h4 class="titre yellow"> <span class="glyphicon glyphicon-map-marker"></span>&nbsp;Cellule'Localisation</h4>
-        <div id="menu">
-
-        </div>
-        <br>
         <h4 class="titre yellow"> <span class="glyphicon glyphicon-map-marker"></span>&nbsp;Cellule'Coordonnée</h4>
-        <div id="menu">
-
-        </div>
-     {% endblock %}
-     
-   {% block sidebar_second %}
-        <h4 class="yellow">Cellule'RESEAUX</h4>
-        <div id="menu">
-            <div class="w3-container">
-                
-            </div>
-        </div>
-        <br>
-        <h4 class="titre yellow"> <span class="glyphicon glyphicon-map-marker"></span>&nbsp;Cellule'Localisation</h4>
-        <div id="menu">
-
-        </div>
-        <br>
-        <h4 class="titre yellow"> <span class="glyphicon glyphicon-map-marker"></span>&nbsp;Cellule'Coordonnée</h4>
-        <div id="menu">
-
+        <div id="menu" class="w3-padding-bottom"">
+          <div class="w3-container w3-card-2 w3-padding-top w3-padding-bottom">
+            <div><img src="{{asset('bundles/ecolesite/images/icones/home.jpeg')}}" style="width: 30px; height:30px;"/><span>&nbsp;&nbsp;Sebkha - Basra</span></div><br>
+            <div> <img src="{{asset('bundles/ecolesite/images/icones/phone.jpeg')}}" style="width: 32px; height:32px;"/><span>&nbsp;(+222)46332817,46445530</span></div><br>
+            <img src="{{asset('bundles/ecolesite/images/icones/mail.jpeg')}}" style="width: 30px; height:30px;"/><span>&nbsp;cellule.savoir@gmail.com</span>
+          </div>
         </div>
      {% endblock %}  
+     {% block javascripts %}
+       <script>
+       jQuery.fn.newsTicker = jQuery.fn.newsticker = function(delay)
+{
+        return this.each(
+                function()
+                {
+                        if(this.nodeName.toLowerCase()!= "ul") return;
+                        delay = delay || 4000;
+                        var self = this;
+                        self.items = jQuery("li", self);
+                        // hide all items (except first one)
+                        self.items.not(":eq(0)").hide().end();
+                        // current item
+                        self.currentitem = 0;
+                        var doTick = function()
+                        {
+                                jQuery.newsticker(self);
+                        }
+                        setInterval(doTick,delay);
+                }
+        )
+        .addClass("newsticker")
+        .hover(
+                function()
+                {
+                        // pause if hovered over
+                        this.pause = true;
+                },
+                function()
+                {
+                        // unpause when not hovered over
+                        this.pause = false;
+                }
+        );
+}
+jQuery.newsticker = function(el)
+{
+        // return if hovered over
+        if(el.pause) return;
+        // hide current item
+        jQuery(el.items[el.currentitem]).fadeOut("slow",
+                function()
+                {
+                        jQuery(this).hide();
+                        // move to next item and show
+                        el.currentitem = ++el.currentitem % (el.items.size());
+                        jQuery(el.items[el.currentitem]).fadeIn("slow");
+                }
+        );
+}
+
+$(document).ready(
+        function()
+        {
+                $("#news").newsTicker();
+        }
+);
+     </script>
+ {% endblock %}  
   
