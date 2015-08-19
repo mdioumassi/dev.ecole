@@ -1,5 +1,5 @@
 html, body {height:100%;margin:0; background-color: #FFFFE0}
-#GrandeIntro {height:34%;border:1px solid red;width: 100%}
+#GrandeIntro {height:34%;width: 100%}
 #siteWrapper {margin-top:-54px;}
 #siteWrapper header.fixed {position:fixed;width: 100%;top:0;left:0;z-index: 100}
 
