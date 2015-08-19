@@ -21,7 +21,7 @@
                     <li><a data-toggle="tab" href="#library">Bibliothèques</a></li>
                   </ul>
   
-                    <div class="tab-content w3-border-bottom w3-border-left w3-border-right">
+                    <div class="tab-content w3-border-bottom w3-border-left w3-border-right blanc">
                       <div id="objectif" class="tab-pane fade in active w3-container">
                         <h3>Objectif</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -42,9 +42,17 @@
                   </div>
             </div>
         </div> 
-      </div>    
+      </div>  
+        {% block javascript %}     
+          <script>
+              $(function(){
+                 $('#myNavbar #notrecole').addClass('active');
+                 $('#myNavbar #home').removeClass('active');
+              });
+          </script>
+        {% endblock %}
    {% endblock %}  
-   {% block sidebar %}
+   {% block sidebar_second %}
          <h4 class="titre yellow"><span class="glyphicon glyphicon-book"></span>&nbsp;&nbsp;Notre Ecole</h4>
             <div id="menu">
               <ul class="w3-ul w3-large">
@@ -56,12 +64,5 @@
                </ul>
            </div>
      {% endblock %}
-      {% block javascript %}     
-         <script>
-             $(function(){
-                $('#myNavbar #notrecole').addClass('active');
-                $('#myNavbar #home').removeClass('active');
-             });
-         </script>
-     {% endblock %}
+
 

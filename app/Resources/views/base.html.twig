@@ -37,64 +37,65 @@
                 interval: 3000	
             });
      </script>
-     <script type="text/javascript"><!--
-jQuery.fn.newsTicker = jQuery.fn.newsticker = function(delay)
+     <script>
+       jQuery.fn.newsTicker = jQuery.fn.newsticker = function(delay)
 {
-	return this.each(
-		function()
-		{
-			if(this.nodeName.toLowerCase()!= "ul") return;
-			delay = delay || 4000;
-			var self = this;
-			self.items = jQuery("li", self);
-			// hide all items (except first one)
-			self.items.not(":eq(0)").hide().end();
-			// current item
-			self.currentitem = 0;
-			var doTick = function()
-			{
-				jQuery.newsticker(self);
-			}
-			setInterval(doTick,delay);
-		}
-	)
-	.addClass("newsticker")
-	.hover(
-		function()
-		{
-			// pause if hovered over
-			this.pause = true;
-		},
-		function()
-		{
-			// unpause when not hovered over
-			this.pause = false;
-		}
-	);
+        return this.each(
+                function()
+                {
+                        if(this.nodeName.toLowerCase()!= "ul") return;
+                        delay = delay || 4000;
+                        var self = this;
+                        self.items = jQuery("li", self);
+                        // hide all items (except first one)
+                        self.items.not(":eq(0)").hide().end();
+                        // current item
+                        self.currentitem = 0;
+                        var doTick = function()
+                        {
+                                jQuery.newsticker(self);
+                        }
+                        setInterval(doTick,delay);
+                }
+        )
+        .addClass("newsticker")
+        .hover(
+                function()
+                {
+                        // pause if hovered over
+                        this.pause = true;
+                },
+                function()
+                {
+                        // unpause when not hovered over
+                        this.pause = false;
+                }
+        );
 }
 jQuery.newsticker = function(el)
 {
-	// return if hovered over
-	if(el.pause) return;
-	// hide current item
-	jQuery(el.items[el.currentitem]).fadeOut("slow",
-		function()
-		{
-			jQuery(this).hide();
-			// move to next item and show
-			el.currentitem = ++el.currentitem % (el.items.size());
-			jQuery(el.items[el.currentitem]).fadeIn("slow");
-		}
-	);
+        // return if hovered over
+        if(el.pause) return;
+        // hide current item
+        jQuery(el.items[el.currentitem]).fadeOut("slow",
+                function()
+                {
+                        jQuery(this).hide();
+                        // move to next item and show
+                        el.currentitem = ++el.currentitem % (el.items.size());
+                        jQuery(el.items[el.currentitem]).fadeIn("slow");
+                }
+        );
 }
 
 $(document).ready(
-	function()
-	{
-		$("#news").newsTicker();
-	}
+        function()
+        {
+                $("#news").newsTicker();
+        }
 );
-// --></script>
+
+     </script>
     </head>
     <body>
         <div id="GrandeIntro" style="border:1px solid red">
@@ -107,9 +108,9 @@ $(document).ready(
                 <div class="col-sm-6 green" style="">
                     <div class="carousel slide" style="margin-top:1px;">
                        <div class="carousel-inner">
-                        <div class="item active"> <img alt="" src="{{asset('bundles/ecolesite/images/primaireb.png')}}"/></div>
-                        <div class="item"> <img alt="" src="{{asset('bundles/ecolesite/images/collegeb.png')}}"/></div>
-                        <div class="item"> <img alt="" src="{{asset('bundles/ecolesite/images/lyceeb.png')}}"/> </div>
+                         <div class="item active"> <a href="{{path('ecole_site_primaire')}}"><img alt="" src="{{asset('bundles/ecolesite/images/primaireb.png')}}"/></a></div>
+                        <div class="item">  <a href="{{path('ecole_site_college')}}"><img alt="" src="{{asset('bundles/ecolesite/images/collegeb.png')}}"/></a></div>
+                        <div class="item"> <a href="{{path('ecole_site_lycee')}}"><img alt="" src="{{asset('bundles/ecolesite/images/lyceeb.png')}}"/></a> </div>
                      </div>
                      </div>
                 </div>  
@@ -162,7 +163,7 @@ $(document).ready(
             <script>
             var header = document.querySelector("#siteWrapper header");
                 function scrolled(){
-                        var windowHeight = document.body.clientHeight/2,
+                        var windowHeight = document.body.clientHeight/3,
                                 currentScroll = document.body.scrollTop || document.documentElement.scrollTop;
                         header.className = (currentScroll >= windowHeight - header.offsetHeight) ? "fixed" : "";
                 }

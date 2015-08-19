@@ -30,9 +30,16 @@
             </div>
         </div> 
       </div> 
-         
+        {% block javascript %}     
+          <script>
+              $(function(){
+                 $('#myNavbar #notrecole').addClass('active');
+                 $('#myNavbar #home').removeClass('active');
+              });
+          </script>
+        {% endblock %}
    {% endblock %}  
-   {% block sidebar %}
+   {% block sidebar_second %}
          <h4 class="titre yellow"><span class="glyphicon glyphicon-book"></span>&nbsp;&nbsp;Notre Ecole</h4>
             <div id="menu">
                <ul class="w3-ul w3-large">     
@@ -44,13 +51,6 @@
                </ul>
            </div>
      {% endblock %} 
-     {% block javascript %}     
-         <script>
-             $(function(){
-                $('#myNavbar #notrecole').addClass('active');
-                $('#myNavbar #home').removeClass('active');
-             });
-         </script>
-     {% endblock %}
+ 
      
 
