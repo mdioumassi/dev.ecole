@@ -6,11 +6,13 @@
                  <div id="contenu">
                   <div class="w3-container">
                     <p>
-                        A car is a wheeled, self-powered motor vehicle used for transportation.
-                        Most definitions of the term specify that cars are designed to run primarily on roads,
-                        to have seating for one to eight people, to typically have for one to eight people,
-                        to typically have four wheels. (Wikipedia)
-                    </p>
+                        Créee en Juillet 2012 par Arrêté Ministériel N° 1430 du 02 juillet 2012, l’Ecole Privée « Cellule du savoir » est un complexe scolaire  qui regroupe:
+                    <ul>
+                    <li>un jardin d’enfants (enseignement préscolaire), comportant une crèche, une petite section, une moyenne section et une grande section ;</li>
+                    <li>   une école fondamentale à cycle complet (enseignement de base)</li>
+                    <li>    une école secondaire comportant un 1er cycle et un 2eme cycle (collège et lycée).</li>
+                    </ul>   
+                    Elle est implantée à Nouakchott, dans la commune de Sebkha, à Basra sur l’axe goudronné entre Etage Kassé et l’arrivage Basra. <a href="{{path('ecole_site_presentation')}}">Lire la suite ...</a>                   </p>
                   </div>
                 </div>
             </div>
@@ -60,22 +62,18 @@
    {% block sidebar_first %}
         <h4 class="titre yellow">Cellule'Statistique</h4>
         <div id="menu">
-            <div class="w3-container">
-             
+            <div class="w3-container w3-card-2 w3-padding-bottom w3-padding-top">
+             <img src="{{asset('bundles/ecolesite/images/stat.jpg')}}">
             </div>
         </div>
         <br>
           <h4 class="titre red"><span class="glyphicon glyphicon-tags"></span>&nbsp;&nbsp;Cellule'ACTU</h4>
           <div id="menu"  style="border-color:red">
-          
-           <div class="w3-container w3-card-2" style="height: 71px">
-             <ul  id="news">
-               {%for actu in actualite %}
-                 <li><a href="{{path('ecole_site_actualite')}}"><img src="{{actu.path}}" width="70" height="70" style="margin-left: -16px "/><span>{{actu.titre}}</span></a></li>
-               {% endfor %}
-               </ul>    
+           {%for actu in actualite %}
+           <div class="w3-container w3-card-2" style="height: 71px; margin-bottom: 5px;">
+                 <a href="{{path('ecole_site_actualite')}}"><img src="{{actu.path}}" width="70" height="70" style="margin-left: -16px "/><span>{{actu.titre}}</span></a>
            </div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
-        
+             {% endfor %}
           </div>
           <br>
 

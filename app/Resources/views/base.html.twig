@@ -98,14 +98,14 @@ $(document).ready(
      </script>
     </head>
     <body>
-        <div id="GrandeIntro">
+        <div id="GrandeIntro" style="background-color: #FFF">
             <div class="row" style="width: 100%">
                 <div class="col-sm-3" style="padding-top: 17px">
                     <div class="w3-image">
                         <a href=""><img src="{{asset('bundles/ecolesite/images/logo.gif')}}" style="width:100%"></a>
                     </div>
                 </div>      
-                <div class="col-sm-6 green" style="">
+                <div class="col-sm-6" style=" margin-left: 10px">
                     <div class="carousel slide" style="margin-top:1px;">
                        <div class="carousel-inner">
                          <div class="item active"> <a href="{{path('ecole_site_primaire')}}"><img alt="" src="{{asset('bundles/ecolesite/images/primaireb.png')}}"/></a></div>
@@ -160,7 +160,7 @@ $(document).ready(
             <script>
             var header = document.querySelector("#siteWrapper header");
                 function scrolled(){
-                        var windowHeight = document.body.clientHeight/3,
+                        var windowHeight = document.body.clientHeight/4,
                                 currentScroll = document.body.scrollTop || document.documentElement.scrollTop;
                         header.className = (currentScroll >= windowHeight - header.offsetHeight) ? "fixed" : "";
                 }
