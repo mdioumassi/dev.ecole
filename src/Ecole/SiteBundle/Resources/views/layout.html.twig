@@ -3,7 +3,17 @@
 {% block  body %}
       <div class="row" style="margin-top: -10px; margin-left: auto; margin-right: auto;">
           <div class="col-sm-3 side_first">
-            {% block sidebar_first %}{% endblock %}
+            {% block sidebar_first %}
+                 <h4 class="titre yellow">Cellule'Statistique</h4>
+        <div id="menu">
+            <div class="w3-container w3-card-2 w3-padding-bottom w3-padding-top">
+             <img src="{{asset('bundles/ecolesite/images/stat.jpg')}}">
+            </div>
+        </div>
+        <br>
+        
+
+            {% endblock %}
           </div>
           <div class="col-sm-6 content">
             {% block content %}{% endblock %}
