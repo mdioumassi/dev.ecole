@@ -1,0 +1,15 @@
+ecole_lycee_homepage:
+    path:     /
+    defaults: { _controller: EcoleLyceeBundle:Lycee:index }
+
+ecole_lycee_biblio:
+    path:     /biblio
+    defaults: { _controller: EcoleLyceeBundle:Lycee:biblio }
+
+ecole_lycee_insc:
+    path:     /inscription
+    defaults: { _controller: EcoleLyceeBundle:Lycee:insc }
+    
+ecole_lycee_classe:
+    path:     /classe
+    defaults: { _controller: EcoleLyceeBundle:Lycee:classe }

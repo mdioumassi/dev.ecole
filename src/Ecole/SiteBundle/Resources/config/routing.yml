@@ -21,11 +21,6 @@ ecole_site_primaire:
 ecole_site_college:
     path:     /college
     defaults: { _controller: EcoleSiteBundle:Site:college }
-    
-ecole_site_lycee:
-    path:     /lycee
-    defaults: { _controller: EcoleSiteBundle:Site:lycee }
-
 
 ecole_site_contact:
     path:     /contact
@@ -36,3 +31,7 @@ ecole_site_contact:
 ecole_site_actualite:
     path:     /actualite
     defaults: { _controller: EcoleSiteBundle:Site:actualite}
+
+ecole_site_stat:
+    path:     /stat
+    defaults: { _controller: EcoleSiteBundle:Site:stat}

@@ -1,0 +1,24 @@
+{% extends "EcoleSiteBundle::layout.html.twig" %}
+    {% block  content %}
+        <div class="row">
+            <div class="col-sm-12">
+                <h4 class="titre red"><span class="glyphicon glyphicon-tags"></span>&nbsp;&nbsp;Statistique</h4>
+                   <div id="contenu" style="">
+                    <div class="w3-container">
+                          
+                    </div>  
+                  
+                   </div>
+           </div>
+        </div>
+        {% block javascript %}     
+          <script>
+              $(function(){
+                 $('#myNavbar #home').removeClass('active');
+              });
+          </script>
+        {% endblock %}
+   {% endblock %}  
+ 
+   
+     

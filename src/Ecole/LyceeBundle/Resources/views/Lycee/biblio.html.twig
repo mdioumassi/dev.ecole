@@ -1,0 +1,60 @@
+{% extends "EcoleSiteBundle::layout.html.twig" %}
+ 
+{% block  content %}
+   <div class="row">
+     <div class="col-sm-12"> 
+         <h4 class="titre teal-l2">Lycée</h4>
+         <div id="contenu" style="border-color: teal">
+           <div class="w3-container">
+           <p>Quibus ita sceleste patratis Paulus cruore perfusus reversusque ad principis castra multos coopertos paene catenis adduxit in squalorem deiectos atque maestitiam, quorum adventu intendebantur eculei uncosque parabat carnifex et tormenta. et ex is proscripti sunt plures actique in exilium alii, non nullos gladii consumpsere poenales. nec enim quisquam facile meminit sub Constantio, ubi susurro tenus haec movebantur, quemquam absolutum.</p>
+           <p>Illud autem non dubitatur quod cum esset aliquando virtutum omnium domicilium Roma, ingenuos advenas plerique nobilium, ut Homerici bacarum suavitate Lotophagi, humanitatis multiformibus officiis retentabant.</p>
+         </div>
+            <div class="w3-container">
+                <ul class="nav nav-tabs nav-justified">
+                 <li><a  href="{{path('ecole_lycee_insc')}}">Inscription</a></li>
+                 <li><a href="{{path('ecole_lycee_classe')}}">Classes</a></li>
+                 <li><a href="#program">Programmes</a></li>
+                 <li class="active"><a>Bibliothèques</a></li>
+                </ul>
+
+                 <div class="tab-content w3-border-bottom w3-border-left w3-border-right blanc">
+                     <div class="w3-container">
+                         <table border="1">
+                             <thead>
+                                 <tr><th>Titre</th><th>Matière</th><th>Visualiser</th></tr>
+                             </thead>
+                             <tbody>
+                                 <tr>
+                                     <td>Epreuve Bac 2015</td><td>Mathématique</td><td><a href="">Télécharger</a></</td>
+                                 </tr>
+                             </tbody>
+                         </table>
+                     </div>
+                 </div>
+            </div>
+         </div>
+     </div> 
+   </div>    
+    {% block javascript %}     
+      <script>
+          $(function(){
+             $('#myNavbar #notrecole').addClass('active');
+             $('#myNavbar #home').removeClass('active');
+          });
+      </script>
+    {% endblock %}
+   {% endblock %}  
+   {% block sidebar_second %}
+         <h4 class="titre yellow"><span class="glyphicon glyphicon-book"></span>&nbsp;&nbsp;Notre Ecole</h4>
+            <div id="menu">
+               <ul class="w3-ul w3-large">
+                   <li class="select"><a href="{{path('ecole_site_presentation')}}">Présention</a></li>
+                   <li><a href="{{path('ecole_site_pedagogie')}}">Projet pédagogique</a></li>
+                   <li><a href="{{path('ecole_site_primaire')}}">Cellule'Primaire</a></li>
+                   <li><a href="{{path('ecole_site_college')}}">Cellule'Collège</a></li>
+                   <li><a href="{{path('ecole_lycee_homepage')}}"><span class="activeMenu">Cellule'Lycée</span></a></li>
+               </ul>
+           </div>
+     {% endblock %} 
+
+

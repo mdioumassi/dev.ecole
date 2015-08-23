@@ -96,33 +96,49 @@ $(document).ready(
 );
 
      </script>
+     <style>
+         #img_band{
+             height: 130px;
+             width: 235px;
+         }
+          #img_bandL{
+             margin-top: 2px;
+             height: 130px;
+             width: 235px;
+         }
+         .modal-lg{
+             width: 1030px
+         }
+     </style>
+     
     </head>
     <body>
         <div id="GrandeIntro" style="background-color: #FFF">
-            <div class="row" style="width: 100%">
-                <div class="col-sm-3" style="padding-top: 17px">
-                    <div class="w3-image">
-                        <a href=""><img src="{{asset('bundles/ecolesite/images/logo.gif')}}" style="width:100%"></a>
+            <div class="row" style="border:1px solid green; width: 100%; margin-left: -1px">
+                <div class="col-sm-3" style="">
+                    <div class="w3-image w3-card-2 w3-margin-top">
+                        <a href=""><img id="img_band" src="{{asset('bundles/ecolesite/images/logo.gif')}}" style="width:100%"></a>
                     </div>
                 </div>      
-                <div class="col-sm-6" style=" margin-left: 10px">
-                    <div class="carousel slide" style="margin-top:1px;">
+                <div class="col-sm-6" style="margin-left: 0px;">
+                    <div class="carousel slide" style="">
                        <div class="carousel-inner">
                          <div class="item active"> <a href="{{path('ecole_site_primaire')}}"><img alt="" src="{{asset('bundles/ecolesite/images/primaireb.png')}}"/></a></div>
                         <div class="item">  <a href="{{path('ecole_site_college')}}"><img alt="" src="{{asset('bundles/ecolesite/images/collegeb.png')}}"/></a></div>
-                        <div class="item"> <a href="{{path('ecole_site_lycee')}}"><img alt="" src="{{asset('bundles/ecolesite/images/lyceeb.png')}}"/></a> </div>
+                        <div class="item"> <a href="{{path('ecole_lycee_homepage')}}"><img alt="" src="{{asset('bundles/ecolesite/images/lyceeb.png')}}"/></a> </div>
                      </div>
                      </div>
                 </div>  
-                <div class="col-sm-3" style=""></div>  
+                <div class="col-sm-3" style=" width:23%">
+                    <div class="w3-image w3-card-2 w3-margin-top">
+                        <a href="" data-toggle="modal" data-target="#myModal"><img id="img_bandL"  src="{{asset('bundles/ecolesite/images/analphatbet.png')}}" alt="Taux d'analphabetisme"/></a>
+                    </div>
+                </div>  
             </div>
         </div>
         <div id="siteWrapper">
             <header>
                     <nav class="navbar navbar-inverse green">
-                      <div class="navbar-header">
-                        <a class="navbar-brand" href="{{path('ecole_site_homepage')}}">Cellule Du Savoir</a>
-                      </div>
                       <div  id="myNavbar">
                         <ul class="nav navbar-nav green">
                           <li class="active" id="home"><a href="{{path('ecole_site_homepage')}}"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Accueil</a></li>
@@ -133,7 +149,7 @@ $(document).ready(
                               <li><a href="{{path('ecole_site_pedagogie')}}">Projet pédagogique</a></li>
                               <li><a href="{{path('ecole_site_primaire')}}">Cellule'Primaire</a></li>
                               <li><a href="{{path('ecole_site_college')}}">Cellule'Collège</a></li>
-                              <li><a href="{{path('ecole_site_lycee')}}">Cellule'Lycée</a></li>
+                              <li><a href="{{path('ecole_lycee_homepage')}}">Cellule'Lycée</a></li>
                             </ul>
                           </li>
                           <li class="dropdown">
@@ -143,6 +159,9 @@ $(document).ready(
                                 <li><a href="#">Parents & L'école</a></li>
                                 <li><a href="#">Suivi & Orientation</a>i</li>
                             </ul>
+                          </li>
+                          <li id="actualite"><a href="{{path('ecole_site_actualite')}}"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;&nbsp;Actualité</a></li>
+                          <li id="co
                           </li>
                           <li id="actualite"><a href="{{path('ecole_site_actualite')}}"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;&nbsp;Actualité</a></li>
                           <li id="contact"><a href="{{path('ecole_site_contact')}}"><span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;Nous contacter</a></li>
@@ -156,6 +175,28 @@ $(document).ready(
             <p>Copyright cellule du savoir www.mohamed.dioumassi.info</p>
           </footer>
         </div>
+           <!-- Modal -->
+            <div class="modal fade" id="myModal" role="dialog">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Taux d'analphabetisme dans le monde</h4>
+                  </div>
+                  <div class="modal-body">
+                     <iframe width="1000" height="400" seamless frameborder="0" scrolling="yes" src="https://docs.google.com/spreadsheets/d/1xROJ3UrzVmfCZz4LJcvChLHSSm9csILYetIoUP_RoDc/pubchart?oid=1999087442&amp;format=interactive"></iframe>
+                         <div class="w3-container w3-border">
+                             <p>Le taux d'alphabétisation est un taux qui prend en compte le nombre de personnes qui savent lire et écrire sur la population totale : (nombre de personnes qui savent lire et écrire / population totale) * 100</p>
+                         </div>
+                         <div class="w3-container w3-border">
+                             <p>L'ONU le calcule sur la base des données disponibles, pour les adultes et adolescents de plus de 15 ans. Ces données sont collectées par l’ISU (Institut de Statistiques de l’UNESCO) en combinant les estimations nationales directes et les estimations de l’ISU), à partir des estimations nationales.</p>
+                         </div>
+                  </div>
+             
+                </div>
+              </div>
+            </div>
+
         {% block javascripts %}
             <script>
             var header = document.querySelector("#siteWrapper header");

@@ -22,6 +22,12 @@ class SiteController extends Controller
             'actualite'=>$this->getAllActualite()
         ));
     }
+    
+    public function statAction()
+    {
+        return $this->render('EcoleSiteBundle:Site:stat.html.twig');
+    }
+    
     public function presentationAction()
     {
         return $this->render('EcoleSiteBundle:Site:presentation.html.twig');
@@ -44,7 +50,7 @@ class SiteController extends Controller
     
     public function lyceeAction()
     {
-        return $this->render('EcoleSiteBundle:Site:lycee.html.twig');
+        return $this->render('EcoleSiteBundle:Site:lycee/lycee.html.twig');
     }
 
     
