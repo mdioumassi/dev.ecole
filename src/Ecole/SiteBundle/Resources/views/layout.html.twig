@@ -6,8 +6,13 @@
             {% block sidebar_first %}
                 <h4 class="titre yellow">Cellule'Statistique</h4>
                 <div id="menu">
-                    <div class="w3-container w3-card-2 w3-padding-bottom w3-padding-top">
-                        <a href="{{path('ecole_site_stat')}}"><img src="{{asset('bundles/ecolesite/images/stat.jpg')}}"></a>
+                    <div class= "w3-card-2 white">
+                        <a href="{{path('ecole_site_stat')}}">
+                          <img src="{{asset('bundles/ecolesite/images/stat.png')}}" style="width:100%">
+                                <div class="w3-container w3-animate-opacity w3-center">
+                                  <h4>Résultat Bac 2015</h4>
+                                </div>
+                        </a>
                     </div>
                 </div>
             {% endblock %}
@@ -17,7 +22,23 @@
           </div>
           
           <div class="col-sm-3 sidebar_second">
-            {% block sidebar_second %}{% endblock %}
+            {% block sidebar_second %}
+              <h4 class="titre yellow">Cellule'RESEAUX</h4>
+                  <div id="menu">
+                      <div class="w3-container w3-padding-bottom w3-card-2">
+                          <div class="fb-like-box" data-href="https://www.facebook.com/pages/Cellule-du-Savoir/448685748623613" data-width="270" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>
+                      </div>
+                  </div>
+                  <br>
+                  <h4 class="titre yellow"> <span class="glyphicon glyphicon-map-marker"></span>&nbsp;Cellule'Coordonnée</h4>
+                  <div id="menu" class="w3-padding-bottom">
+                    <div class="w3-container w3-card-2 w3-padding-top w3-padding-bottom white">
+                      <div><img src="{{asset('bundles/ecolesite/images/icones/home.jpeg')}}" style="width: 30px; height:30px;"/><span>&nbsp;&nbsp;Sebkha - Basra</span></div><br>
+                      <div> <img src="{{asset('bundles/ecolesite/images/icones/phone.jpeg')}}" style="width: 32px; height:32px;"/><span>&nbsp;(+222)46332817,46445530</span></div><br>
+                      <img src="{{asset('bundles/ecolesite/images/icones/mail.jpeg')}}" style="width: 30px; height:30px;"/><span>&nbsp;cellule.savoir@gmail.com</span>
+                    </div>
+                  </div>
+            {% endblock %}
           </div>
       </div>
 
