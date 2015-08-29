@@ -99,7 +99,7 @@ $(document).ready(
      </script>
      <style>
          #img_band{
-             height: 137px;
+             height: 135px;
              width: 235px;
          }
           #img_bandL{
@@ -115,6 +115,7 @@ $(document).ready(
     </head>
     <body>
         <div id="GrandeIntro" class="white" style="border:1px solid green">
+          <div class="container-fluid">
             <div class="row" style="width: 100%; ">
                 <div class="col-sm-3" style="">
                     <div class="w3-image ">
@@ -136,10 +137,12 @@ $(document).ready(
                     </div>
                 </div>  
             </div>
+          </div>
         </div>
            <div id="header" class="blanc">
                 <header>
                     <nav class="navbar navbar-inverse green" style="width:100%">
+                      <div class="container-fluid">
                         <ul class="nav navbar-nav green">
                           <li class="active" id="home"><a href="{{path('ecole_site_homepage')}}"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Accueil</a></li>
                           <li id="notrecole" class="dropdown">
@@ -166,6 +169,7 @@ $(document).ready(
                     <ul class="nav navbar-nav navbar-right" >
                       <li><a data-toggle="modal" data-target="#id01" href="#"><span class="glyphicon glyphicon-log-in w3-margin-8 "></span> Login</a></li>
                     </ul>
+                      </div>
                   </nav>
             </header>
            </div>
