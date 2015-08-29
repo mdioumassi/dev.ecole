@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8" />
+        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{% block title %}Cellule Du Savoir{% endblock %}</title>
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
@@ -99,13 +99,13 @@ $(document).ready(
      </script>
      <style>
          #img_band{
-             height: 130px;
+             height: 137px;
              width: 235px;
          }
           #img_bandL{
-             margin-top: 2px;
-             height: 130px;
-             width: 235px;
+             margin-left: -28px;
+             height: 137px;
+
          }
          .modal-lg{
              width: 1030px
@@ -114,33 +114,32 @@ $(document).ready(
      
     </head>
     <body>
-        <div id="GrandeIntro" style="background-color: #FFF">
-            <div class="row" style="border:1px solid green; width: 100%; margin-left: -1px">
+        <div id="GrandeIntro" class="white" style="border:1px solid green">
+            <div class="row" style="width: 100%; ">
                 <div class="col-sm-3" style="">
-                    <div class="w3-image w3-card-2 w3-margin-top">
+                    <div class="w3-image ">
                         <a href=""><img id="img_band" src="{{asset('bundles/ecolesite/images/logo.gif')}}" style="width:100%"></a>
                     </div>
                 </div>      
-                <div class="col-sm-6" style="margin-left: 0px;">
+                <div class="col-sm-5 white" style="">
                     <div class="carousel slide" style="">
                        <div class="carousel-inner">
                          <div class="item active"> <a href="{{path('ecole_site_primaire')}}"><img alt="" src="{{asset('bundles/ecolesite/images/primaireb.png')}}"/></a></div>
-                        <div class="item">  <a href="{{path('ecole_site_college')}}"><img alt="" src="{{asset('bundles/ecolesite/images/collegeb.png')}}"/></a></div>
+                        <div class="item">  <a href="{{path('ecole_site_college')}}"><img style="width:548px" alt="" src="{{asset('bundles/ecolesite/images/collegeb.png')}}"/></a></div>
                         <div class="item"> <a href="{{path('ecole_lycee_homepage')}}"><img alt="" src="{{asset('bundles/ecolesite/images/lyceeb.png')}}"/></a> </div>
                      </div>
                      </div>
                 </div>  
-                <div class="col-sm-3" style=" width:23%">
-                    <div class="w3-image w3-card-2 w3-margin-top">
-                        <a href="" data-toggle="modal" data-target="#myModal"><img id="img_bandL"  src="{{asset('bundles/ecolesite/images/analphatbet.png')}}" alt="Taux d'analphabetisme"/></a>
+                <div class="col-sm-4" style="">
+                    <div class="w3-image">
+                        <a href="" data-toggle="modal" data-target="#myModal"><img id="img_bandL"  src="{{asset('bundles/ecolesite/images/analphat_m.png')}}" alt="Taux d'analphabetisme"/></a>
                     </div>
                 </div>  
             </div>
         </div>
-        <div id="siteWrapper" style="border:1px solid red">
-            <header>
-                    <nav class="navbar navbar-inverse green">
-                      <div  id="myNavbar">
+           <div id="header" class="blanc">
+                <header>
+                    <nav class="navbar navbar-inverse green" style="width:100%">
                         <ul class="nav navbar-nav green">
                           <li class="active" id="home"><a href="{{path('ecole_site_homepage')}}"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Accueil</a></li>
                           <li id="notrecole" class="dropdown">
@@ -153,24 +152,30 @@ $(document).ready(
                               <li><a href="{{path('ecole_lycee_homepage')}}">Cellule'Lycée</a></li>
                             </ul>
                           </li>
-                          <li class="dropdown">
+                          <!--<li class="dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-bookmark"></span>&nbsp;&nbsp;Notre projet éducatif <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a href="#">Qualité de l'enseignement</a></li>
                                 <li><a href="#">Parents & L'école</a></li>
                                 <li><a href="#">Suivi & Orientation</a>i</li>
                             </ul>
-                          </li>
+                          </li>-->
                           <li id="actualite"><a href="{{path('ecole_site_actualite')}}"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;&nbsp;Actualité</a></li>
                           <li id="contact"><a href="{{path('ecole_site_contact')}}"><span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;Nous contacter</a></li>
                         </ul>
-                      </div>
+                    <ul class="nav navbar-nav navbar-right" >
+                      <li><a data-toggle="modal" data-target="#id01" href="#"><span class="glyphicon glyphicon-log-in w3-margin-8 "></span> Login</a></li>
+                    </ul>
                   </nav>
             </header>
+           </div>
+        <div id="siteWrapper" class="blanc w3-padding-bottom">
               {% block body %}{% endblock %} 
-           <footer class="w3-container green">
-            <p>Copyright cellule du savoir www.mohamed-dioumassi.info</p>
-          </footer>
+        </div>
+        <div id="footer" class="white">
+            <footer class="w3-container green">
+                <p>Copyright &#169; La cellule du savoir</p>
+            </footer>
         </div>
            <!-- Modal -->
             <div class="modal fade" id="myModal" role="dialog">
@@ -193,10 +198,39 @@ $(document).ready(
                 </div>
               </div>
             </div>
+           <!-- Le login -->
+  <div class="modal fade" id="id01" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header teal">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h2 class="w3-text-theme w3-center">Connection</h2>
+        </div>
+        <div class="modal-body">
+          <form class="w3-container">
+            <div class="w3-group">      
+              <input class="w3-input" type="text" required>
+              <label class="w3-label">Login</label>
+            </div>
+            <div class="w3-group">      
+              <input class="w3-input" type="password" required>
+              <label class="w3-label">Mot de passe</label>
+            </div>
+            <br>
+            <button class="w3-btn w3-theme">Se connecter </button>
+            <br><br>
+          </form>
+        </div>
+        <div class="modal-footer teal">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
         {% block javascripts %}
             <script>
-            var header = document.querySelector("#siteWrapper header");
+            var header = document.querySelector("#header header");
                 function scrolled(){
                         var windowHeight = document.body.clientHeight/4,
                                 currentScroll = document.body.scrollTop || document.documentElement.scrollTop;

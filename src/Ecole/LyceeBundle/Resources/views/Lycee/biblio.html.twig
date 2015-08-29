@@ -38,8 +38,8 @@
     {% block javascript %}     
       <script>
           $(function(){
-             $('#myNavbar #notrecole').addClass('active');
-             $('#myNavbar #home').removeClass('active');
+             $('#notrecole').addClass('active');
+             $('#home').removeClass('active');
           });
       </script>
     {% endblock %}
@@ -47,7 +47,7 @@
    {% block sidebar_second %}
          <h4 class="titre yellow"><span class="glyphicon glyphicon-book"></span>&nbsp;&nbsp;Notre Ecole</h4>
             <div id="menu">
-               <ul class="w3-ul w3-large">
+               <ul class="w3-ul w3-card-2 white">
                    <li class="select"><a href="{{path('ecole_site_presentation')}}">Présention</a></li>
                    <li><a href="{{path('ecole_site_pedagogie')}}">Projet pédagogique</a></li>
                    <li><a href="{{path('ecole_site_primaire')}}">Cellule'Primaire</a></li>

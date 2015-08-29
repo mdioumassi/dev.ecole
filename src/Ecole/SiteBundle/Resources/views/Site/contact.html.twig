@@ -4,6 +4,7 @@
         <div class="col-sm-12"> 
             <h4 class="titre green"><span class="glyphicon glyphicon-envelope"></span>&nbsp;Formulaire de Contact</h4>
             <div id="contenu">
+               <div class="w3-container">
                 <form class="w3-container w3-card-2" method="POST" action="{{path('ecole_site_contact')}} {{ form_enctype(form) }}">
                     <div class="w3-group">      
                         {{ form_widget(form.nom, {'attr': {'class': 'w3-input', 'style':'width:90%'}}) }}
@@ -23,14 +24,15 @@
                       </div>
                     <button class="w3-btn teal" type="submit">Envoyer</button>
                 </form>
+               </div>
             </div>
         </div>         
       </div>
      {% block javascript %}     
          <script>
              $(function(){
-                $('#myNavbar #contact').addClass('active');
-                $('#myNavbar #home').removeClass('active');
+                $('#contact').addClass('active');
+                $('#home').removeClass('active');
              });
          </script>
      {% endblock %}
