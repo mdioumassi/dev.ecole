@@ -1,6 +1,6 @@
 {% extends "EcoleSiteBundle::layout.html.twig" %}
     {% block  content %}
-       <div class="row"><br>
+       <div class="row">
         <div class="col-sm-12"> 
             <h4 class="titre green"><span class="glyphicon glyphicon-envelope"></span>&nbsp;Formulaire de Contact</h4>
             <div id="contenu">
@@ -28,30 +28,13 @@
             </div>
         </div>         
       </div>
-     {% block javascript %}     
-         <script>
-             $(function(){
-                $('#contact').addClass('active');
-                $('#home').removeClass('active');
-             });
-         </script>
-     {% endblock %}
+      {% block javascript %}     
+          <script>
+              $(function(){
+                 $('#presentation').hide();
+              });
+          </script>
+        {% endblock %}
    {% endblock %}  
-   {% block sidebar_second %}
-        <h4 class="titre yellow">Cellule'RESEAUX</h4>
-        <div id="menu">
-             <div class="w3-container">
-                <div class="fb-like-box" data-href="https://www.facebook.com/pages/Cellule-du-Savoir/448685748623613" data-width="250" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>
-            </div>
-        </div>
-        <br>
-        <h4 class="titre yellow">Cellule'Coordonnées</h4>
-        <div id="menu">
-          <table>
-            <tr><td><img src="{{asset('bundles/ecolesite/images/icones/home.jpeg')}}" style="width: 30px; height:30px;"/></td><td>&nbsp;Sebkha - Basra</td></tr>
-            <tr><td><img src="{{asset('bundles/ecolesite/images/icones/phone.jpeg')}}" style="width: 30px; height:30px;"/></td><td>+22246578494, +22244551085</td></tr>
-            <tr><td><img src="{{asset('bundles/ecolesite/images/icones/mail.jpeg')}}" style="width: 30px; height:30px;"/></td><td>contact@asso-apmeg.org</td></tr>
-          </table>
-        </div>
-     {% endblock %}  
+ 
 

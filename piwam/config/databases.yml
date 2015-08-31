@@ -1,0 +1,47 @@
+prod:
+  propel:
+    class:        sfPropelDatabase
+    param:
+      classname:  PropelPDO
+      persistent: true
+      pooling:    true
+      
+      # Configure the following lines with your own database settings
+      # -------------------------------------------------------------
+      
+      dsn:      mysql:dbname=u205204631_piwam;host=localhost
+      username: u205204631_user
+      password: piwam5
+      encoding:   utf8
+      
+      # -------------------------------------------------------------
+      # End of editable area. Do NOT edit following lines
+      
+
+dev:
+  propel:
+    param:
+      classname:  DebugPDO
+
+test:
+  propel:
+    param:
+      classname:  DebugPDO
+      persistent: true
+      pooling:    true
+      dsn:        mysql:dbname=piwam-test;host=localhost
+      username:   root
+      password: 
+      encoding:   utf8
+
+all:
+  propel:
+    class:        sfPropelDatabase
+    param:
+      classname:  PropelPDO
+      persistent: true
+      pooling:    true
+      dsn:        mysql:dbname=piwam;host=localhost
+      username:   root
+      password:   
+      encoding:   utf8

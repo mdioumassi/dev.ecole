@@ -1,0 +1,348 @@
+/*
+ * Classical styles for links and images
+ */
+a img,:link img,:visited img {
+    border: none;
+}
+
+/* Explicit cursor for links without href attribute */
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:Visited {
+    color: blue;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Links on complete cell */
+a.block {
+    display: block;
+    color: black;
+}
+
+a.block:Hover {
+    text-decoration: none;   
+}
+
+#content li {
+    list-style: none;
+}
+
+/*****************************************************************************
+ *
+ * TITLES
+ *
+ ****************************************************************************/
+
+/* Global title, shown on each page */
+h1 {
+    background-color: #1472B4;
+    color: white;
+    padding: 10px;
+}
+
+/* section title */
+h2 {
+    color: #329126;
+}
+
+h2 a:Hover {
+    text-decoration: none;   
+}
+
+/* subtitle which may be on a page */
+h3 {
+    color: black;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* block title */
+h4 {
+    
+}
+
+/*****************************************************************************
+ *
+ * PAGE BLOCKS
+ * -----------
+ * Represents the global layout of different blocks
+ *
+ ****************************************************************************/
+
+body {
+    margin: 0;
+    padding: 10px;
+    font-family: Helvertica, Verdana, Arial, sans-serif;
+    font-size: 12px;
+    background-color: #fff;
+}
+
+/* global block embedding the others */
+#container {
+    margin: auto;
+    width: 90%;
+}
+
+/* content block */
+#content {
+    margin-top: 25px;
+    margin-left: 250px;
+}
+
+/* ----------------------------------- MENU -------------------------------- */
+
+/* menu block */
+#menu {
+    position: relative;
+    float: left;
+    width: 200px;
+}
+
+/* section in the menu */
+.mainSection {
+    background-color: #41B200;
+    color: white;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 10px;
+    border-bottom: 1px solid #555;
+}
+
+/* menu list */
+#menu ul {
+    padding-left: 10px;
+}
+
+/* menu items */
+#menu li {
+    display: block;
+    padding: 2px;
+}
+
+/* links in menu */
+#menu a {
+    text-decoration: none;
+    color: #999;
+}
+
+#menu a:Hover {
+    color: #000;
+}
+
+
+/* ------------------------------ END OF MENU -------------------------------*/
+
+/* used for embed forms */
+.subform {
+    
+}
+
+.subform table th {
+    text-align: left;
+    font-weight: normal;
+    background-color: #eeeeff;
+    padding: 10px;
+    color: #666;
+}
+
+/*****************************************************************************
+**
+** DIFFERENTS ELEMENTS
+**
+*****************************************************************************/
+
+/* Search bars on top of pages */
+div#searchBar {
+    background-color: #eee;
+    padding: 10px;
+    margin-bottom: 10px;
+    -moz-border-radius: 8px;   
+}
+
+/* listing tables : members, accounts, etc... */
+.tableauDonnees {
+    width: 90%;
+    border: 1px solid black;
+}
+
+.tableauDonnees tbody tr:Hover {
+    background-color: #E8FD98;
+}
+
+.tableauDonnees tbody td {
+    font-family: verdana, sans-serif;
+    font-size: 11px;
+    color: #162027;
+    padding-left: 5px;
+}
+
+/* Header of listing tables */
+.enteteTableauDonnees {
+    background: black;
+    color: white;
+}
+
+/* Links in header of listing tables */
+.enteteTableauDonnees a {
+    color: white;
+    text-decoration: underline;
+}
+.enteteTableauDonnees a:Hover {
+    text-decoration: none;
+}
+
+/* left cell in details tables */
+.tableauDetails th {
+    text-align: left;
+    padding: 5px;
+    border-bottom: 1px dotted black;
+    background-color: #efefff;
+}
+
+/* right cell */
+.tableauDetails td {
+    border-bottom: 1px dotted black;
+    padding: 5px 5px 5px 10px;
+}
+
+.tableauDetails tfoot td {
+    padding-top: 10px;
+    border-bottom: 0;
+}
+
+/* left cell in add/edit forms, with label */
+.tableauAjout th {
+    text-align: left;
+    padding: 3px;
+}
+
+/* right cell in add forms */
+.tableauAjout td {
+    padding: 3px;
+}
+
+/* list of error message */
+.error_list {
+    list-style: none;
+    display: inline;
+    padding: 0px;
+    margin: 0px;
+}
+
+/* error item in list of error messages */
+.error_list li {
+    list-style: none;
+    display: inline;
+    padding: 0px;
+    margin: 0px;
+    color: red;
+}
+
+/* for accounts with positive balance */
+.comptePositif {
+    background-color: #C2FCC3;
+}
+
+/* for accounts with negative balance */
+.compteNegatif {
+    background-color: #EECEBE;
+}
+
+/* members who have to pay their fee */
+.cotisationNonAjour {
+    background-color: #E6E0D1;
+}
+
+/* flash box giving error messages */
+.error {
+    background-color: #ffeeee;
+    color: red;
+    padding: 7px;
+    margin: 0px 0px 20px 0px;
+}
+
+/* flash box giving notice messages */
+p.notice {
+    background-color: #80FA46;
+    padding: 9px;
+    border: 1px dotted #777;
+    font-weight: bold;
+}
+
+/* flash box giving informations */
+.info {
+    background-color: #dedede;
+    padding: 20px;
+}
+
+.info ul {
+    list-style: none;
+}
+
+/* for the mailing feature > preview of content */
+.mailPreview {
+    padding: 15px;
+    background-color: #efefff;
+    border: 1px dotted #ccc;
+}
+
+/*****************************************************************************
+**
+** TESTS RESULTS (WHEN CHECKING CONFIGURATION...)
+**
+*****************************************************************************/
+.test_error,.test_warning,.test_success,.test_help {
+    padding: 10px;
+    width: 80%;
+    margin: 3px;
+    border: 1px dotted #333;
+}
+
+.test_error {
+    background-color: #F1C5C5;
+}
+
+.test_warning {
+    background-color: #FFE28E;
+}
+
+.test_success {
+    background-color: #B0FF98;
+}
+
+.test_help {
+    
+}
+
+
+
+/*****************************************************************************
+**
+** USER PICTURES
+**
+*****************************************************************************/
+
+div.user_picture {
+	background-color: #e3e3ee;
+	width: auto;
+	float: left;
+	padding: 10px;
+	margin: 5px;
+	text-align: center;
+}
+
+div.user_picture .name {
+	font-weight: bold;
+	font-size: 0.8em;
+	text-align: center;
+	margin-top: 3px;
+	color: #888;
+}

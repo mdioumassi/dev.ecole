@@ -1,0 +1,27 @@
+# default rules
+homepage:
+  url:   /
+  param: { module: membre, action: index }
+
+default_index:
+  url:   /:module
+  param: { action: index }
+
+default:
+  url:   /:module/:action/*
+
+ajax_search_members:
+  url:   membre/ajaxlist
+  param: { module: membre, action: ajaxlist }
+  
+mailing:
+  url:   /mailing
+  param: { module: mailing, action: index }
+  
+error_credentials:
+  url:   /error/credentials
+  param: { module: error, action: credentials }
+  
+setup:
+  url:   /install
+  param: { module: install, action: index }

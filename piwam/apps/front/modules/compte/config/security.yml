@@ -1,0 +1,14 @@
+index:
+  credentials: list_compte
+  
+create:
+  credentials: add_compte
+  
+new:
+  credentials: add_compte
+
+edit:
+  credentials: edit_compte
+  
+delete:
+  credentials: del_compte

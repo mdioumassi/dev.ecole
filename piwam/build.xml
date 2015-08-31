@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Piwam" default="build" basedir=".">
+
+	<target name="checkout">
+		<exec executable="svn" dir="${basedir}">
+			<arg line="up" />
+		</exec>
+	</target>
+
+	<target name="phpcpd">
+		<exec dir="${basedir}" executable="phpcpd" failonerror="false">
+			<arg line="--log-pmd=${basedir}/build/logs/pmd-cpd.xml
+			    --exclude ${basedir}/lib 
+				--exclude ${basedir}/cache
+				--exclude ${basedir}/log
+				--exclude ${basedir}/plugins
+				${basedir}" />
+		</exec>
+	</target>
+
+	<target name="pdepend">
+		<exec dir="${basedir}" executable="pdepend" failonerror="false">
+			<arg line="--jdepend-xml=${basedir}/build/logs/jdepend.xml ." />
+		</exec>
+	</target>
+
+	<target name="lint" description="Check PHP syntax">
+		<phplint>
+			<fileset dir=".">
+				<include name="**/*.php" />
+				<exclude name="./lib/vendor/**/*.php" />
+			</fileset>
+		</phplint>
+	</target>
+
+	<target name="phpcs">
+		<exec executable="phpcs" output="${basedir}/build/logs/checkstyle.xml" dir="${basedir}">
+			<arg line="--report=checkstyle
+			     --ignore=${basedir}/lib/vendor/*
+			     --ignore=${basedir}/test 
+			     --ignore=${basedir}/cache
+			     --ignore=${basedir}/log 
+			     --ignore=${basedir}/doc  
+			     --standard=Symfony
+				${basedir}" />
+		</exec>
+	</target>
+
+	<target name="clearcache">
+		<exec executable="${basedir}/symfony">
+			<arg line=" cc" />
+		</exec>
+	</target>
+
+	<target name="test">
+		<exec executable="${basedir}/symfony">
+			<arg line=" test:undercontrol ${basedir}/build/logs/undercontrol.xml" />
+		</exec>
+	</target>
+
+
+	<target name="build" depends="clearcache,checkout,phpcs,phpcpd,pdepend,test" />
+</project>

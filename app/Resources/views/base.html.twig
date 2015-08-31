@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{% block title %}Cellule Du Savoir{% endblock %}</title>
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link rel="stylesheet" media="screen" href="{{asset('bundles/ecolesite/css/screen.css')}}" />
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,500italic,700' rel='stylesheet' type='text/css'>
          <!-- Latest compiled and minified CSS -->
         
@@ -20,6 +21,7 @@
         <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <div id="fb-root"></div>
         <div id="fb-root"></div>
          <script>(function(d, s, id) {
@@ -38,73 +40,13 @@
                 interval: 3000	
             });
      </script>
-     <script>
-       jQuery.fn.newsTicker = jQuery.fn.newsticker = function(delay)
-{
-        return this.each(
-                function()
-                {
-                        if(this.nodeName.toLowerCase()!= "ul") return;
-                        delay = delay || 4000;
-                        var self = this;
-                        self.items = jQuery("li", self);
-                        // hide all items (except first one)
-                        self.items.not(":eq(0)").hide().end();
-                        // current item
-                        self.currentitem = 0;
-                        var doTick = function()
-                        {
-                                jQuery.newsticker(self);
-                        }
-                        setInterval(doTick,delay);
-                }
-        )
-        .addClass("newsticker")
-        .hover(
-                function()
-                {
-                        // pause if hovered over
-                        this.pause = true;
-                },
-                function()
-                {
-                        // unpause when not hovered over
-                        this.pause = false;
-                }
-        );
-}
-jQuery.newsticker = function(el)
-{
-        // return if hovered over
-        if(el.pause) return;
-        // hide current item
-        jQuery(el.items[el.currentitem]).fadeOut("slow",
-                function()
-                {
-                        jQuery(this).hide();
-                        // move to next item and show
-                        el.currentitem = ++el.currentitem % (el.items.size());
-                        jQuery(el.items[el.currentitem]).fadeIn("slow");
-                }
-        );
-}
-
-$(document).ready(
-        function()
-        {
-                $("#news").newsTicker();
-        }
-);
-
-     </script>
      <style>
          #img_band{
-             height: 135px;
-             width: 235px;
+           margin-top: 10px;
+           height: 125px;
          }
           #img_bandL{
              margin-left: -28px;
-             height: 137px;
 
          }
          .modal-lg{
@@ -114,33 +56,55 @@ $(document).ready(
      
     </head>
     <body>
-        <div id="GrandeIntro" class="white" style="border:1px solid green">
+        <div id="GrandeIntro" class="white" style="border:1px solid green; margin-top: 5px;height: 140px ">
           <div class="container-fluid">
-            <div class="row" style="width: 100%; ">
+            <div class="row" style="width: 100%;">
                 <div class="col-sm-3" style="">
                     <div class="w3-image ">
-                        <a href=""><img id="img_band" src="{{asset('bundles/ecolesite/images/logo.gif')}}" style="width:100%"></a>
+                        <a href=""><img id="img_band" src="{{asset('bundles/ecolesite/images/logo.gif')}}"></a>
                     </div>
                 </div>      
-                <div class="col-sm-5 white" style="">
+                <div class="col-sm-5 white" style="padding-top: 3px;">
                     <div class="carousel slide" style="">
                        <div class="carousel-inner">
                          <div class="item active"> <a href="{{path('ecole_site_primaire')}}"><img alt="" src="{{asset('bundles/ecolesite/images/primaireb.png')}}"/></a></div>
-                        <div class="item">  <a href="{{path('ecole_site_college')}}"><img style="width:548px" alt="" src="{{asset('bundles/ecolesite/images/collegeb.png')}}"/></a></div>
+                        <div class="item">  <a href="{{path('ecole_site_college')}}"><img  alt="" src="{{asset('bundles/ecolesite/images/collegeb.png')}}"/></a></div>
                         <div class="item"> <a href="{{path('ecole_lycee_homepage')}}"><img alt="" src="{{asset('bundles/ecolesite/images/lyceeb.png')}}"/></a> </div>
                      </div>
                      </div>
                 </div>  
-                <div class="col-sm-4" style="">
+                <div class="col-sm-4" style="padding-top: 2px;">
                     <div class="w3-image">
-                        <a href="" data-toggle="modal" data-target="#myModal"><img id="img_bandL"  src="{{asset('bundles/ecolesite/images/analphat_m.png')}}" alt="Taux d'analphabetisme"/></a>
+                        <a href="" data-toggle="modal" data-target="#myModal"><img id="img_bandL"  src="{{asset('bundles/ecolesite/images/carte.png')}}" alt="Taux d'analphabetisme"/></a>
                     </div>
-                </div>  
+                   <div class="w3-image" >
+                       <a href="http://lm2d.com/" target="_blank"><img src="{{asset('bundles/ecolesite/images/logolmd.png')}}" style="margin-top: -152px; margin-left: 187px;height:133px; width: 235px; "></a>
+                   </div>
+                </div>
+               
             </div>
           </div>
         </div>
+            <div id="menuH" class="w3-container teal">
+              <i class="material-icons w3-opennav" onclick="w3_open()">menu</i>
+              <h1>Cellule du Savoir</h1>
+            </div>
+            <div id="menuMobile">
+                <nav class="w3-sidenav white w3-card-2" style="display:none;width: 30%">
+                    <a href="javascript:void(0)" 
+                    onclick="w3_close()"
+                    class="w3-closenav w3-large">Close ×</a>
+                    <a href="#">Link 1</a>		
+                    <a href="#">Link 2</a>		
+                    <a href="#">Link 3</a>		
+                    <a href="#">Link 4</a>		
+                    <a href="#">Link 5</a>		
+                  </nav>
+            </div>
+         
            <div id="header" class="blanc">
-                <header>
+                   <header>
+                   
                     <nav class="navbar navbar-inverse green" style="width:100%">
                       <div class="container-fluid">
                         <ul class="nav navbar-nav green">
@@ -242,6 +206,15 @@ $(document).ready(
                 }
                 addEventListener("scroll", scrolled, false);
             </script>
+            
+            <script>
+                function w3_open() {
+                    document.getElementsByClassName("w3-sidenav")[0].style.display = "block";
+                }
+                function w3_close() {
+                    document.getElementsByClassName("w3-sidenav")[0].style.display = "none";
+                }
+             </script>
         {% endblock %}
     </body>
 </html>

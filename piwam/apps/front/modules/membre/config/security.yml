@@ -1,0 +1,57 @@
+
+# If we want to register the first Membre of
+# an association, we authorize the access but
+# anyway we check if the session variable
+# `association_id` which is stored temporary
+# has been set correctly
+
+newfirst:
+  is_secure:    off
+  
+firstcreate:
+  is_secure:    off
+  
+endregistration:
+  is_secure:    off
+  
+index:
+  # Credentials are checked in action class since revision r154
+  #credentials:  list_membre
+  
+search:
+  ccredentials: list_membre
+
+create:
+  credentials:  add_membre
+
+new:
+  credentials:  add_membre
+
+delete:
+  credentials:  del_membre
+
+requestsubscription:
+  is_secure:    off
+  
+createpending:
+  is_secure:    off
+  
+pending:
+  is_secure:    off
+  
+validate :
+  credentials:  edit_membre
+  
+edit:
+
+  # To strictly forbid users to edit their own profile, and just allow
+  # users who have the credential, just uncomment the following line
+  #credentials:  edit_membre
+  
+  
+show:
+
+  # To strictly forbid users to show their own profile, and just allow
+  # users who have the credential, just uncomment the following line
+  #credentials:  show_membre
+  

@@ -1,0 +1,27 @@
+
+    * Put "static" content in artial :
+      $mailBody = $this->getPartial('mailBody', array('name' => 'John Doe'));
+    * Add version tables (triggers)
+    * Mailing : store sent messages
+    * Make beautiful search bar
+    * Check that user picture is removed when user is deleted
+	* associationActionsTest : solve issue of blocking code
+    * Install : _generateConfigFile : make better replacements (thanks to pseudo
+      constant like #DB_HOST
+    * Write tests for short_website_url
+	* Display a legend when displaying icons (edit, delete...)
+	* Issue when deleting compte :
+		-> recette / depense still exist
+		- ... but don't appear in bilan !
+	* Update mis_a_jour_par after deleting objects
+	* Create cookie when log in
+	* History table to keep history of each update
+	* Activite : add description field
+	* Association > config > allow user to set a port and encryption settings
+	* Membre/Ajaxlist : select only membre for current association
+	* Provide bilan by year
+	* PDF output for bilan
+	* Export should be put in each module
+	* Association > mailing > find a way to store error messages
+	* Add a compte > delete it > try to recreate one > error "existing record"
+	x Membre : registration > set 'email' as mandatory for the first user

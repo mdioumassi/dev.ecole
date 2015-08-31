@@ -2,7 +2,7 @@
     {% block  content %}
           <div class="row">
             <div class="col-sm-12">
-                <h4 class="titre green"> <span class="glyphicon glyphicon-tags"></span>&nbsp;&nbsp;La Cellule du Savoir</h4>
+                <h4 class="titre green"> <span class="glyphicon glyphicon-tags"></span> &nbsp;&nbsp;La Cellule du Savoir</h4>
                  <div id="contenu">
                   <div class="w3-container">
                     <p>
@@ -19,7 +19,7 @@
         </div><br>
           <div class="row">
             <div class="col-sm-12">
-                <h4 class="titre green"> <span class="glyphicon glyphicon-tags"></span>&nbsp;&nbsp;Projet Educatif</h4>
+                <h4 class="titre green"> <span class="glyphicon glyphicon-tags"></span> &nbsp;&nbsp;Projet Educatif</h4>
                  <div id="contenu">
                     <div class="w3-container">
                     <p>
@@ -58,6 +58,14 @@
                  </div>
             </div>
           </div>
+        {% block javascript %}     
+          <script>
+              $(function(){
+                 $('#presentation').hide();
+              });
+          </script>
+        {% endblock %}
    {% endblock %}
+    
 
   

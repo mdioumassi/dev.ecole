@@ -13,11 +13,10 @@ html, body {height:100%;margin:0; background-color: #FFFFE0}
    width: 100%;
    padding: 5px;
    margin-top: 5px;
-   
-  
-	bottom:0;
-	left:0;
+    bottom:0;
+    left:0;
 } 
+
 img{
     max-width: 100%;
     height: auto;

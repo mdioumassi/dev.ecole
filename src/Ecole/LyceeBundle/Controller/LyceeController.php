@@ -8,7 +8,9 @@ class LyceeController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('EcoleLyceeBundle:Lycee:index.html.twig');
+        return $this->render('EcoleLyceeBundle:Lycee:index.html.twig',array(
+            'actualite'=>$this->getAllActualite()
+        ));
     }
     
     public function biblioAction()
@@ -24,5 +26,15 @@ class LyceeController extends Controller
     public function classeAction()
     {
         return $this->render('EcoleLyceeBundle:Lycee:classes.html.twig');
+    }
+    private function getAllActualite(){
+	$em = $this->getDoctrine()->getEntityManager();
+	$query = $em->createQuery(
+	 'SELECT a FROM EcoleAdminBundle:Actualite a
+          WHERE a.active=1
+	  ORDER BY a.timestamp DESC
+    '
+	);//->setMaxResults(2);
+	 return $query->getResult();
     }
 }
