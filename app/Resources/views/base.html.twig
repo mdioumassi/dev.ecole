@@ -6,7 +6,7 @@
         <title>{% block title %}Cellule Du Savoir{% endblock %}</title>
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
         <link rel="stylesheet" media="screen" href="{{asset('bundles/ecolesite/css/screen.css')}}" />
-        <link href='http://fonts.googleapis.com/css?family=Roboto:400,500italic,700' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
          <!-- Latest compiled and minified CSS -->
         
         {% block stylesheets %}
@@ -56,7 +56,8 @@
      
     </head>
     <body>
-        <div id="GrandeIntro" class="white" style="border:1px solid green; margin-top: 5px;height: 140px ">
+       <div id="page-wrapper" style="padding: 0 10px 0 10px;">
+        <div id="GrandeIntro" class="white" style="border:1px solid green;height: 140px ">
           <div class="container-fluid">
             <div class="row" style="width: 100%;">
                 <div class="col-sm-3" style="">
@@ -195,6 +196,7 @@
       </div>
     </div>
   </div>
+</div>
 
         {% block javascripts %}
             <script>
