@@ -98,9 +98,9 @@ $(document).ready(
 
      </script>
      <style>
-         #img_band{
+         #img_band1{
              height: 135px;
-             width: 235px;
+             width: 230px;
          }
           #img_bandL{
              margin-left: -28px;
@@ -233,6 +233,7 @@ $(document).ready(
   </div>
 
         {% block javascripts %}
+            <script src="{{asset('bundles/ecoleadmin/js/ckeditor/ckeditor.js')}}"></script>
             <script>
             var header = document.querySelector("#header header");
                 function scrolled(){
