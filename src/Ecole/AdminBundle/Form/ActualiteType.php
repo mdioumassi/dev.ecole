@@ -16,10 +16,10 @@ class ActualiteType extends AbstractType
     {
         $builder
             ->add('titre')
-            ->add('contenu')
+              ->add('contenu','textarea', array('attr' => array('class' => 'ckeditor')))
             ->add('timestamp','hidden',array('data' => time()))
+            //->add('path')
             ->add('active')
-            ->add('path')
         ;
     }
     

@@ -1,0 +1,16 @@
+
+# For this part, we must have a special "common" credential
+index:
+  credentials: config_cotisations
+  
+create:
+  credentials: config_cotisations
+
+new:
+  credentials: config_cotisations
+  
+edit:
+  credentials: config_cotisations
+  
+delete:
+  credentials: config_cotisations

@@ -24,7 +24,6 @@ class ActualiteController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $entities = $em->getRepository('EcoleAdminBundle:Actualite')->findAll();
-
         return $this->render('EcoleAdminBundle:Actualite:index.html.twig', array(
             'entities' => $entities,
         ));

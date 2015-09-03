@@ -1,0 +1,14 @@
+
+# Developer Document
+--------------------
+When sharing a new version, think about...
+
+
+# SQL
+-----
+
+    1) Be sure that SQL files do not refers to a specific db name. IE, check
+       that no table are written as `piwam`.`piwam_table`.
+       
+    2) Be sure that /piwam/install.sql is up to date
+        * piwam_data.dbversion = CURRENT_VERSION

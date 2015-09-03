@@ -1,0 +1,33 @@
+@media screen and (min-width: 200px) and (max-width: 640px){
+    #GrandeIntro{
+        display: none;
+        clear:both;
+    } 
+    #header{
+        display: none;
+        clear:both;
+    }
+    #menuMobile{
+        display: block;
+        clear:both;
+    }
+    #menuH{
+         display: block;
+    }
+    #siteWrapper{
+  
+    }
+}
+@media screen and (min-width: 800px) and (max-width: 1280px){
+     #menuMobile{
+        display: none;
+        clear:both;
+    }
+    #menuH{
+         display: none;
+         clear:both;
+    }
+}
+@media screen and (orientation:landscape){
+  
+}

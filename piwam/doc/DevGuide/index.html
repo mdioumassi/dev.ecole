@@ -1,0 +1,104 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <title>Piwam : Guide d'utilisation</title>
+    </head>
+    <body>
+<div id="content">
+<h1>Piwam: Guide développeurs</h1>
+
+<h2>Objectif de ce document</h2>
+<p>
+    Ce document s'adresse aux développeurs souhaitant contribuer au projet Piwam :
+</p>
+<ul>
+    <li>Correction de bugs</li>
+    <li>Rajout de fonctionnalités</li>
+    <li>Modification de fonctionnalités</li>
+</ul>
+<p>
+    Si vous souhaitez juste utiliser Piwam au quotidien, vous pouvez donc oublier
+    ce document !
+</p>
+
+
+<h2>Normes de codage</h2>
+
+<h3>Indentation</h3>
+<p>
+    L'indentation s'effectue par des espaces (et non des tabulations). La taille
+    des tabulations est de <strong>4</strong> espaces.
+</p>
+
+
+<h3>Commentaires</h3>
+<p>
+    Les fonctions et méthodes disponibles publiquement doivent être commentées
+    en suivant la syntaxe Doxygen
+</p>
+<pre>
+    /**
+     * Append a string to another one
+     *
+     * @param   string  $a
+     * @param   string  $b
+     * @return  string
+     * @author  John Doe
+     */
+    public function concat($a, $b)
+    {
+        return $a . $b;
+    }
+</pre>
+<p>
+    Les méthodes privées peuvent se contenter de commentaires classiques 
+    expliquant l'utilisation et l'utilité de la méthode.
+</p>
+
+<h3>Casse</h3>
+<p>
+    Le nom des <strong>classes</strong> s'écrit en UpperCamelCase, sauf celles 
+    commençant par un préfixe qui s'écriront alors en lowerCamelCase.<br />
+</p>
+<p>
+    Le nom des <strong>méthodes</strong>
+</p>
+<pre>
+    class MyClass extends sfOtherClass
+    {
+        public function myMethod()
+        {
+        }
+    }
+</pre>
+
+<h3>Accolades</h3>
+<p>
+    Pour faciliter les choses, <strong>toutes</strong> les accolades sont placées
+    sur leur propre ligne :
+</p>
+<pre>
+    if (myBool === true)
+    {
+        // do nothing
+    }
+    else
+    {
+        try
+        {
+      
+        }
+        catch (Exception $e)
+        {
+      
+        }
+    }
+</pre>
+
+<h2>Gestion de l'utilisateur courant</h2>
+
+<h2>Gestion des préférences</h2>
+</div>
+    </body>
+</html>

@@ -30,11 +30,6 @@ class Actualite
     private $timestamp;
 
     /**
-     * @var string
-     */
-    private $path;
-
-    /**
      * @var boolean
      */
     private $active;
@@ -118,6 +113,20 @@ class Actualite
     {
         return $this->timestamp;
     }
+    /**
+     * Get active
+     *
+     * @return boolean 
+     */
+    public function getActive()
+    {
+        return $this->active;
+    }
+    /**
+     * @var string
+     */
+    private $path;
+
 
     /**
      * Set path
@@ -145,7 +154,7 @@ class Actualite
     /**
      * Set active
      *
-     * @param boolean $active
+     * @param integer $active
      * @return Actualite
      */
     public function setActive($active)
@@ -153,15 +162,5 @@ class Actualite
         $this->active = $active;
 
         return $this;
-    }
-
-    /**
-     * Get active
-     *
-     * @return boolean 
-     */
-    public function getActive()
-    {
-        return $this->active;
     }
 }

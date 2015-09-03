@@ -1,0 +1,14 @@
+index:
+  credentials: list_cotisation
+  
+create:
+  credentials: add_cotisation
+
+new:
+  credentials: add_cotisation
+  
+edit:
+  credentials: edit_cotisation
+  
+delete:
+  credentials: del_cotisation

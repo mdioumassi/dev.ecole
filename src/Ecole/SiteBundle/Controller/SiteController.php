@@ -25,32 +25,44 @@ class SiteController extends Controller
     
     public function statAction()
     {
-        return $this->render('EcoleSiteBundle:Site:stat.html.twig');
+        return $this->render('EcoleSiteBundle:Site:stat.html.twig',array(
+            'actualite'=>$this->getAllActualite()
+        ));
     }
     
     public function presentationAction()
     {
-        return $this->render('EcoleSiteBundle:Site:presentation.html.twig');
+        return $this->render('EcoleSiteBundle:Site:presentation.html.twig',array(
+            'actualite'=>$this->getAllActualite()
+        ));
     }
     
     public function pedagogieAction()
     {
-        return $this->render('EcoleSiteBundle:Site:pedagogie.html.twig');
+        return $this->render('EcoleSiteBundle:Site:pedagogie.html.twig',array(
+            'actualite'=>$this->getAllActualite()
+        ));
     }
     
     public function primaireAction()
     {
-        return $this->render('EcoleSiteBundle:Site:primaire.html.twig');
+        return $this->render('EcoleSiteBundle:Site:primaire.html.twig',array(
+            'actualite'=>$this->getAllActualite()
+        ));
     }
     
     public function collegeAction()
     {
-        return $this->render('EcoleSiteBundle:Site:college.html.twig');
+        return $this->render('EcoleSiteBundle:Site:college.html.twig',array(
+            'actualite'=>$this->getAllActualite()
+        ));
     }
     
     public function lyceeAction()
     {
-        return $this->render('EcoleSiteBundle:Site:lycee/lycee.html.twig');
+        return $this->render('EcoleSiteBundle:Site:lycee/lycee.html.twig',array(
+            'actualite'=>$this->getAllActualite()
+        ));
     }
 
     
@@ -79,6 +91,7 @@ class SiteController extends Controller
         
         return $this->render('EcoleSiteBundle:Site:contact.html.twig',array(
             'form'=>$form->createView(),
+            'actualite'=>$this->getAllActualite()
         ));
        //
     }

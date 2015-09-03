@@ -1,0 +1,14 @@
+index:
+  credentials: list_recette
+  
+create:
+  credentials: add_recette
+
+new:
+  credentials: add_recette
+  
+edit:
+  credentials: edit_recette
+  
+delete:
+  credentials: del_recette

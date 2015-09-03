@@ -1,0 +1,14 @@
+index:
+  credentials: list_statut
+  
+create:
+  credentials: add_statut
+
+new:
+  credentials: add_statut
+    
+edit:
+  credentials: edit_statut
+  
+delete:
+  credentials: del_statut
