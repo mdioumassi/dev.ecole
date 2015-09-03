@@ -1,7 +1,9 @@
+{% extends "EcoleAdminBundle::layout.html.twig" %}
 
-    <h1>Actualite creation</h1>
-
+{% block content -%}
+  <h1>Actualite creation</h1>
     {{ form(form) }}
     <a class="btn btn-primary" href="{{ path('actualite') }}">
                     Liste des actualités
                 </a>
+     {% endblock %}

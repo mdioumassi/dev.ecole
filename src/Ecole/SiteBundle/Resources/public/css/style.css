@@ -5,7 +5,10 @@ html, body {height:100%;margin:0; background-color: #FFFFE0;font-family: 'Open S
   padding: 7px 12px 5px 12px;
   height: 70px;
 }
-#siteWrapper {margin-top:5px;width: 100%; border:1px solid green; padding-top: 20px;}
+#siteWrapper {margin-top:5px;
+              width: 100%; 
+              border:1px solid green;
+              padding-top: 20px;}
 #header header.fixed {position:fixed;width: 100%;top:0;left:0;z-index: 100;}
 
  #footer {

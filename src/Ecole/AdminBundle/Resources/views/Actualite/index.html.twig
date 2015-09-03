@@ -18,10 +18,10 @@
                            </tr>
                            <tr>
                                <th>Contenu</th>
-                               <td>{{ entity.contenu }}</td>
+                               <td><div>{{ entity.contenu }}</div></td>
                            </tr>
                            <tr>
-                               <th>Date<T/th>
+                               <th>Date</th>
                                <td>{{ entity.timestamp|date("m/d/Y") }}</td>
                            </tr>
                            <tr>
@@ -34,7 +34,7 @@
             </div>
 
             <!-- Trigger the modal with a button -->
-            <a data-toggle="modal" href="{{path('actualite_new')}}" class="btn btn-info btn-lg" data-target="#myModal">Ajouter un article</a>
+            <a href="{{path('actualite_new')}}" class="btn btn-info btn-lg">Ajouter un article</a>
 
             <!-- Modal -->
             <div id="myModal" class="modal fade" role="dialog">
