@@ -11,7 +11,7 @@
                            <div class="w3-container">
                             
                              <h4 class="red">{{ actu.titre }} <span style="float: right">Publié le :{{ actu.timestamp|date("d/m/Y") }}<span></h4> 
-                               <div id="texte">{{ actu.contenu }}</div>
+                               <div id="texte">{{ actu.contenu|raw  }}</div>
                           </div>
                               </li>
                            </ul>

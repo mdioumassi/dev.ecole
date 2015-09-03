@@ -7,7 +7,7 @@
                     {% for actu in actualite %}
                       <div class="w3-container w3-card-2">
                           <h4 class="red">{{ actu.titre }} <span style="float: right">Publié le :{{ actu.timestamp|date("d/m/Y") }}<span></h4> 
-                          <p>{{ actu.contenu|escape }}</p>
+                          <p>{{ actu.contenu|raw  }}</p>
                           </div><br>
                                   {% endfor%} 
                    </div>
