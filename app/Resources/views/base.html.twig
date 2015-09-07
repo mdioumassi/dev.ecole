@@ -50,7 +50,7 @@
              width: 230px;
          }
           #img_bandL{
-             margin-left: -28px;
+             margin-left: 0px;
 
          }
          .modal-lg{
@@ -59,7 +59,16 @@
      </style>
      
     </head>
-    <body>
+    <body>   
+        <!-- Google Tag Manager -->
+        <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NJSW7X"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-NJSW7X');</script>
+        <!-- End Google Tag Manager -->
        <div id="page-wrapper" style="padding: 0 10px 0 10px;">
         <div id="GrandeIntro" class="white" style="border:1px solid green;height: 140px ">
           <div class="container-fluid">
@@ -83,23 +92,23 @@
                         <a href="" data-toggle="modal" data-target="#myModal"><img id="img_bandL"  src="{{asset('bundles/ecolesite/images/carte.png')}}" alt="Taux d'analphabetisme"/></a>
                     </div>
                    <div class="w3-image" >
-                       <a href="http://lm2d.com/" target="_blank"><img src="{{asset('bundles/ecolesite/images/logolmd.png')}}" style="margin-top: -152px; margin-left: 187px;height:133px; width: 235px; "></a>
+                       <a href="http://lm2d.com/" target="_blank"><img src="{{asset('bundles/ecolesite/images/logolmd.png')}}" style="margin-top: -152px; margin-left: 187px;height:131px; width: 225px; border-top-right-radius: 15px;border-bottom-right-radius: 15px;  "></a>
                    </div>
                 </div>
                
             </div>
           </div>
         </div>
-            <div id="menuH" class="w3-container teal">
-              <i class="material-icons w3-opennav" onclick="w3_open()">menu</i>
-              <h1>Cellule du Savoir</h1>
+            <div id="menuH" class="w3-container green">
+              <i class="material-icons w3-opennav" onclick="w3_open()">Menu</i>
+              <h2 class="w3-center">La Cellule du Savoir</h2>
             </div>
             <div id="menuMobile">
                 <nav class="w3-sidenav white w3-card-2" style="display:none;width: 30%">
                     <a href="javascript:void(0)" 
                     onclick="w3_close()"
-                    class="w3-closenav w3-large">Close ×</a>
-                    <a href="#">Link 1</a>		
+                    class="w3-closenav w3-large">Fermer ×</a>
+                    <a href="#">Accueil </a>		
                     <a href="#">Link 2</a>		
                     <a href="#">Link 3</a>		
                     <a href="#">Link 4</a>		
@@ -136,7 +145,7 @@
                           <li id="contact"><a href="{{path('ecole_site_contact')}}"><span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;Nous contacter</a></li>
                         </ul>
                     <ul class="nav navbar-nav navbar-right" >
-                      <li><a data-toggle="modal" data-target="#id01" href="#"><span class="glyphicon glyphicon-log-in w3-margin-8 "></span> Login</a></li>
+                      <li><a data-toggle="modal" data-target="#id01" href="#"><span class="glyphicon glyphicon-log-in w3-margin-8"></span> Login</a></li>
                     </ul>
                       </div>
                   </nav>

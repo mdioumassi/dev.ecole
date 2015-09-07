@@ -1,14 +1,35 @@
 html, body {height:100%;margin:0; background-color: #FFFFE0;font-family: 'Open Sans', sans-serif;}
+
+/*MENU*/
+#header ul li #home{
+    border:1px solid blue;
+    border-radius: 10px;
+}
+
+/*FIN MENU*/
 #header {
   border: 1px solid green;
   margin-top: 8px;
   padding: 7px 12px 5px 12px;
   height: 70px;
+   box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7),
+            -1px 2px 20px rgb(238, 238, 238) inset; 
+             border-radius: 10px;
 }
-#siteWrapper {margin-top:5px;
-              width: 100%; 
-              border:1px solid green;
-              padding-top: 20px;}
+#GrandeIntro{
+       box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7),
+            -1px 2px 20px rgb(51, 204, 51) inset; 
+             border-radius: 10px;
+}
+#siteWrapper {
+    margin-top:10px;
+    width: 100%; 
+    border:1px solid green;
+    padding-top: 20px;
+     box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7),
+            -1px 2px 20px rgb(51, 204, 51) inset; 
+             border-radius: 10px;
+}
 #header header.fixed {position:fixed;width: 100%;top:0;left:0;z-index: 100;}
 
  #footer {
@@ -18,6 +39,9 @@ html, body {height:100%;margin:0; background-color: #FFFFE0;font-family: 'Open S
    margin-top: 5px;
     bottom:0;
     left:0;
+    box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7),
+            -1px 2px 20px rgb(51, 204, 51) inset; 
+             border-radius: 10px;
 } 
 
 img{
@@ -74,11 +98,12 @@ img{
 }
 
 .navbar-nav{
+   margin-left: -15px;
    font-size: 16px;
-
+   border-radius: 5px;
 }
 .navbar.navbar-inverse{
-
+      border-radius: 5px;          
 }
 .celluleLeft{
    border-top-right-radius: 15px;
@@ -96,8 +121,7 @@ img{
    margin-left: 11px;
 }
 footer{
-    position: relative;
-    bottom: 0;   
+
 }
 .activeMenu{
     text-decoration: none;
