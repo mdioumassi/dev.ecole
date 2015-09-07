@@ -10,12 +10,21 @@
     #menuMobile{
         display: block;
         clear:both;
+         position: relative;
+        z-index: 150;
     }
     #menuH{
+        margin-top: -20px;
          display: block;
+         z-index: 110;
+         position: fixed;
+         width: 100%;
+         margin-left: -10px;
+
     }
     #siteWrapper{
-  
+      position: relative;
+      top: 90px;
     }
 }
 @media screen and (min-width: 800px) and (max-width: 1280px){
