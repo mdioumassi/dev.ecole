@@ -5,12 +5,12 @@ namespace Ecole\AdminBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Actualite
+ * Page
  *
  * @ORM\Table()
- * @ORM\Entity(repositoryClass="Ecole\AdminBundle\Entity\ActualiteRepository")
+ * @ORM\Entity(repositoryClass="Ecole\AdminBundle\Entity\PageRepository")
  */
-class Actualite
+class Page
 {
     /**
      * @var integer
@@ -36,19 +36,10 @@ class Actualite
     private $contenu;
 
     /**
-     * @var \DateTime
-     *
-     * @ORM\Column(name="timestamp", type="datetime")
+     * @ORM\ManyToOne(targetEntity="Ecole\AdminBundle\Entity\TypePage")
+     * @ORM\JoinColumn(nullable=false)
      */
-    private $timestamp;
-
-    /**
-     * @var boolean
-     *
-     * @ORM\Column(name="active", type="boolean")
-     */
-    private $active;
-
+    private $type;
 
     /**
      * Get id
@@ -64,7 +55,7 @@ class Actualite
      * Set titre
      *
      * @param string $titre
-     * @return Actualite
+     * @return Page
      */
     public function setTitre($titre)
     {
@@ -87,7 +78,7 @@ class Actualite
      * Set contenu
      *
      * @param string $contenu
-     * @return Actualite
+     * @return Page
      */
     public function setContenu($contenu)
     {
@@ -107,48 +98,25 @@ class Actualite
     }
 
     /**
-     * Set timestamp
+     * Set type
      *
-     * @param \DateTime $timestamp
-     * @return Actualite
+     * @param \Ecole\AdminBundle\Entity\TypePage $type
+     * @return Page
      */
-    public function setTimestamp($timestamp)
+    public function setType(\Ecole\AdminBundle\Entity\TypePage $type)
     {
-        $this->timestamp = $timestamp;
+        $this->type = $type;
 
         return $this;
     }
 
     /**
-     * Get timestamp
+     * Get type
      *
-     * @return \DateTime 
+     * @return \Ecole\AdminBundle\Entity\TypePage 
      */
-    public function getTimestamp()
+    public function getType()
     {
-        return $this->timestamp;
-    }
-
-    /**
-     * Set active
-     *
-     * @param boolean $active
-     * @return Actualite
-     */
-    public function setActive($active)
-    {
-        $this->active = $active;
-
-        return $this;
-    }
-
-    /**
-     * Get active
-     *
-     * @return boolean 
-     */
-    public function getActive()
-    {
-        return $this->active;
+        return $this->type;
     }
 }

@@ -57,20 +57,12 @@
             </div>
                </div>
   {% endblock %}
-  {% block sidebar %}
-        <h4 class="titre yellow">Administration</h4>
-        <div id="menu">
-            <ul class="w3-ul w3-large">
-                   <li class="select"><a href="{{path('actualite')}}">Gestion actualité</a></li>
-                  
-               </ul>
-        </div>
-     {% endblock %}  
-  {% block javascript %}     
-         <script>
-             $(function(){
-                $('#myNavbar #actualite').addClass('active');
-                $('#myNavbar #home').removeClass('active');
-             });
-         </script>
-     {% endblock %}
+
+{% block javascript %}     
+    <script>
+        $(function(){
+           $('#actualite').addClass('active');
+           $('#home').removeClass('active');
+        });
+    </script>
+{% endblock %}
