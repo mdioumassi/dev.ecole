@@ -26,6 +26,23 @@
       position: relative;
       top: 90px;
     }
+    .col-sm-4{
+      border:1px solid red;
+    }
+    #primaire{
+  
+    }
+    #college{
+
+    }
+     #lycee{
+    }
+     #primaire  .titre, #college .titre{
+       font-size: 10px;
+    }
+    .fb-like-box .fb_iframe_widget{
+       border:1px solid red
+    }
 }
 @media screen and (min-width: 800px) and (max-width: 1280px){
      #menuMobile{
