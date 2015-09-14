@@ -1,0 +1,30 @@
+page:
+    path:     /
+    defaults: { _controller: "EcoleAdminBundle:Page:index" }
+
+page_show:
+    path:     /{id}/show
+    defaults: { _controller: "EcoleAdminBundle:Page:show" }
+
+page_new:
+    path:     /new
+    defaults: { _controller: "EcoleAdminBundle:Page:new" }
+
+page_create:
+    path:     /create
+    defaults: { _controller: "EcoleAdminBundle:Page:create" }
+    methods:  POST
+
+page_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "EcoleAdminBundle:Page:edit" }
+
+page_update:
+    path:     /{id}/update
+    defaults: { _controller: "EcoleAdminBundle:Page:update" }
+    methods:  [POST, PUT]
+
+page_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "EcoleAdminBundle:Page:delete" }
+    methods:  [POST, DELETE]

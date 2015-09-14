@@ -4,7 +4,7 @@
       <div class="row" style="margin-top: -10px; margin-left: auto; margin-right: auto;">
           <div class="col-sm-3 side_first">
             {% block sidebar_first %}
-                <h4 class="titre yellow">Cellule'Statistique</h4>
+                <h4 class="titreMenu yellow">Cellule'Statistique</h4>
                 <div id="menu">
                     <div class= "w3-card-2 white">
                         <a href="{{path('ecole_site_stat')}}">
@@ -15,7 +15,7 @@
                         </a>
                     </div>
                 </div> <br>
-                <h4 class="titre red">Cellule'Actualité</h4>
+                <h4 class="titreMenu red">Cellule'Actualité</h4>
                 <div id="menu" style="border:1px solid red">
                     {% for actu in actualite %}
                     <div class= "w3-card-2 white">
@@ -32,15 +32,15 @@
           <div class="col-sm-3 sidebar_second">
             {% block sidebar_second %}
                 <div id="reseaux">
-                  <h4 class="titre yellow">Cellule'RESEAUX</h4>
+                  <h4 class="titreMenu yellow">Cellule'RESEAUX</h4>
                     <div id="menu">
                         <div class="w3-container w3-padding-bottom w3-card-2">
-                            <div class="fb-like-box" data-href="https://www.facebook.com/pages/Cellule-du-Savoir/448685748623613" data-width="260" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>
+                            <div class="fb-like-box" data-href="https://www.facebook.com/pages/Cellule-du-Savoir/448685748623613" data-width="210" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>
                         </div>
                     </div>
                 </div>
               <div id="presentation">
-                <h4 class="titre yellow"><span class="glyphicon glyphicon-book"></span>&nbsp;&nbsp;Notre Ecole</h4>
+                <h4 class="titreMenu yellow"><span class="glyphicon glyphicon-book"></span>&nbsp;&nbsp;Notre Ecole</h4>
                 <div id="menu">
                    <ul class="w3-ul w3-card-2 white">     
                        <li id="present"><a href="{{path('ecole_site_presentation')}}">Présentation</a></li>
@@ -53,7 +53,7 @@
                </div>
                   <br>
                 <div id="coord">
-                  <h4 class="titre yellow"> <span class="glyphicon glyphicon-map-marker"></span>&nbsp;Cellule'Coordonnée</h4>
+                  <h4 class="titreMenu yellow"> <span class="glyphicon glyphicon-map-marker"></span>&nbsp;Cellule'Coordonnée</h4>
                   <div id="menu" class="w3-padding-bottom">
                     <div class="w3-container w3-card-2 w3-padding-top w3-padding-bottom white">
                       <div><img src="{{asset('bundles/ecolesite/images/icones/home.jpeg')}}" style="width: 30px; height:30px;"/><span>&nbsp;&nbsp;Sebkha - Basra</span></div><br>

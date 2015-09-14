@@ -44,18 +44,18 @@
      <style>
          #img_band{
            margin-top: 10px;
-           height: 125px;
+           height: 120px;
          #img_band1{
              height: 135px;
              width: 230px;
          }
           #img_bandL{
-             margin-left: 0px;
-
+             height: 125px;
          }
          .modal-lg{
              width: 1030px
          }
+    
      </style>
      
     </head>
@@ -78,7 +78,7 @@
                         <a href=""><img id="img_band" src="{{asset('bundles/ecolesite/images/logo.gif')}}"></a>
                     </div>
                 </div>      
-                <div class="col-sm-5 white" style="padding-top: 3px;">
+                <div class="col-sm-6 white" style="padding-top: 3px;">
                     <div class="carousel slide" style="">
                        <div class="carousel-inner">
                          <div class="item active"> <a href="{{path('ecole_site_primaire')}}"><img alt="" src="{{asset('bundles/ecolesite/images/primaireb.png')}}"/></a></div>
@@ -87,15 +87,14 @@
                      </div>
                      </div>
                 </div>  
-                <div class="col-sm-4" style="padding-top: 2px;">
+                <div class="col-sm-3" style="padding-top: 2px;">
                     <div class="w3-image">
-                        <a href="" data-toggle="modal" data-target="#myModal"><img id="img_bandL"  src="{{asset('bundles/ecolesite/images/carte.png')}}" alt="Taux d'analphabetisme"/></a>
+                        <a href="" data-toggle="modal" data-target="#myModal"><img id="img_bandL"  src="{{asset('bundles/ecolesite/images/carte.png')}}" style="height:125px;margin-top: 5px" alt="Taux d'analphabetisme"/></a>
                     </div>
                    <div class="w3-image" >
-                       <a href="http://lm2d.com/" target="_blank"><img src="{{asset('bundles/ecolesite/images/logolmd.png')}}" style="margin-top: -152px; margin-left: 187px;height:131px; width: 225px; border-top-right-radius: 15px;border-bottom-right-radius: 15px;  "></a>
+                       <a href="http://lm2d.com/" target="_blank"><img src="{{asset('bundles/ecolesite/images/logolmd.png')}}" style="margin-top: -144px; margin-left: 130px;height:124px; width: 135px; border-top-right-radius: 15px;border-bottom-right-radius: 15px;  "></a>
                    </div>
                 </div>
-               
             </div>
           </div>
         </div>

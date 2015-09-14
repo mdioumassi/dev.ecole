@@ -3,29 +3,37 @@
 namespace Ecole\LyceeBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Ecole\AdminBundle\Entity\Page;
 
 class LyceeController extends Controller
 {
     public function indexAction()
     {
         return $this->render('EcoleLyceeBundle:Lycee:index.html.twig',array(
-            'actualite'=>$this->getAllActualite()
+            'actualite'=>$this->getAllActualite(),
+            'contenus'=>$this->getContenu()
         ));
     }
     
     public function biblioAction()
     {
-        return $this->render('EcoleLyceeBundle:Lycee:biblio.html.twig');
+        return $this->render('EcoleLyceeBundle:Lycee:biblio.html.twig',array(
+            'actualite'=>$this->getAllActualite()
+        ));
     }
     
     public function inscAction()
     {
-        return $this->render('EcoleLyceeBundle:Lycee:inscription.html.twig');
+        return $this->render('EcoleLyceeBundle:Lycee:inscription.html.twig',array(
+            'actualite'=>$this->getAllActualite()
+        ));
     }
     
     public function classeAction()
     {
-        return $this->render('EcoleLyceeBundle:Lycee:classes.html.twig');
+        return $this->render('EcoleLyceeBundle:Lycee:classes.html.twig',array(
+            'actualite'=>$this->getAllActualite()
+        ));
     }
     private function getAllActualite(){
 	$em = $this->getDoctrine()->getEntityManager();
@@ -36,5 +44,10 @@ class LyceeController extends Controller
     '
 	);//->setMaxResults(2);
 	 return $query->getResult();
+    }
+    
+     private function getContenu(){
+        $em = $this->getDoctrine()->getManager();
+        return $em->getRepository('EcoleAdminBundle:Page')->findAll();
     }
 }

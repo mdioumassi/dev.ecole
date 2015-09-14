@@ -6,7 +6,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
-class ActualiteType extends AbstractType
+class TypePageType extends AbstractType
 {
     /**
      * @param FormBuilderInterface $builder
@@ -15,11 +15,7 @@ class ActualiteType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('titre')
-            ->add('contenu','textarea', array('attr' => array('class' => 'ckeditor')))
-            ->add('timestamp','hidden',array('data' => time()))
-            ->add('active')
-           // ->add('path')
+            ->add('nom')
         ;
     }
     
@@ -29,7 +25,7 @@ class ActualiteType extends AbstractType
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'Ecole\AdminBundle\Entity\Actualite'
+            'data_class' => 'Ecole\AdminBundle\Entity\TypePage'
         ));
     }
 
@@ -38,6 +34,6 @@ class ActualiteType extends AbstractType
      */
     public function getName()
     {
-        return 'ecole_adminbundle_actualite';
+        return 'ecole_adminbundle_typepage';
     }
 }

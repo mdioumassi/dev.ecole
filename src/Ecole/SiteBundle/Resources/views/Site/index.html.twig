@@ -2,7 +2,7 @@
     {% block  content %}
           <div class="row">
             <div class="col-sm-12">
-                <h4 class="titre green"> <span class="glyphicon glyphicon-tags"></span> &nbsp;&nbsp;La Cellule du Savoir</h4>
+                <h4 class="titreM green"> <span class="glyphicon glyphicon-tags"></span> &nbsp;&nbsp;La Cellule du Savoir</h4>
                  <div id="contenu">
                   <div class="w3-container">
                     <p>
@@ -19,7 +19,7 @@
         </div><br>
           <div class="row">
             <div class="col-sm-12">
-                <h4 class="titre green"> <span class="glyphicon glyphicon-tags"></span> &nbsp;&nbsp;Projet Educatif</h4>
+                <h4 class="titreM green"> <span class="glyphicon glyphicon-tags"></span> &nbsp;&nbsp;Projet Educatif</h4>
                  <div id="contenu">
                     <div class="w3-container">
                     <p>
@@ -34,19 +34,16 @@
         </div><br>
           <div class="row" style="border:1px solid red">
             <div class="col-sm-4">
-                <div id="primaire">
-                    <h4 class="titre orange">Cellule'Primaire</h4>
-                     <div id="contenu" style="border-color: orange;padding-bottom: 15px;">
-                         <div class="w3-card-2">
-                            <a href="{{path('ecole_site_primaire')}}"><img src="{{asset('bundles/ecolesite/images/primaire.png')}}" alt="Le primaire" style="width:100%"></a>
-                        </div>
-                     </div>
-                </div>
+                <h4 class="titreMenu orange">Cellule'Primaire</h4>
+                 <div id="contenuBlok" style="border-color: orange;padding-bottom: 15px;">
+                     <div class="w3-card-2">
+                        <a href="{{path('ecole_site_primaire')}}"><img src="{{asset('bundles/ecolesite/images/primaire.png')}}" alt="Le primaire" style="width:100%"></a>
+                    </div>
+                 </div>
             </div> 
             <div class="col-sm-4">
-              <div id="college">
-                <h4 class="titre light-green">Cellule'Collège</h4>
-                 <div id="contenu" style="border-color: teal; padding-bottom: 15px;">
+                <h4 class="titreMenu light-green">Cellule'Collège</h4>
+                 <div id="contenuBlok" style="border-color: teal; padding-bottom: 15px;">
                     <div class="w3-card-2">
                         <a href="{{path('ecole_site_college')}}"><img src="{{asset('bundles/ecolesite/images/college.png')}}" alt="Le collège" style="width:100%"></a>
                     </div>
@@ -54,6 +51,12 @@
               </div>
             </div>
             <div class="col-sm-4">
+                <h4 class="titreMenu teal-l2">Cellule'Lycée</h4>
+                 <div id="contenuBlok" style="border-color: teal; padding-bottom: 15px;">
+                     <div class="w3-card-2">
+                         <a href="{{path('ecole_lycee_homepage')}}"><img src="{{asset('bundles/ecolesite/images/lycee.png')}}" alt="Le lycée" style="width:100%;border-top-right-radius: 15px"></a>
+                    </div>
+                 </div>
                 <div id="lycee">
                     <h4 class="titre teal-l2">Cellule'Lycée</h4>
                      <div id="contenu" style="border-color: teal; padding-bottom: 15px;">

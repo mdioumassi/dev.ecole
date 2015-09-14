@@ -15,7 +15,15 @@
           </div>
           
           <div class="col-sm-4 celluleRight">
-            {% block sidebar %}{% endblock %}
+            {% block sidebar %}
+                <h4 class="titre yellow">Administration</h4>
+                <div id="menu">
+                    <ul class="w3-ul w3-large">
+                           <li class="select"><a href="{{path('actualite')}}">Gestion actualité</a></li>
+                           <li class="select"><a href="{{path('page')}}">Gestion contenu</a></li>
+                       </ul>
+                </div>
+            {% endblock %}
           </div>
       </div>
 {% endblock %}

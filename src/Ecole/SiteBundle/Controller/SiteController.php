@@ -2,10 +2,12 @@
 
 namespace Ecole\SiteBundle\Controller;
 
+
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
 use Ecole\AdminBundle\Entity\Actualite;
+use Ecole\AdminBundle\Entity\Page;
 
 class SiteController extends Controller
 {
@@ -32,15 +34,21 @@ class SiteController extends Controller
     
     public function presentationAction()
     {
+        $em = $this->getDoctrine()->getManager();
+
+        $presentation = $em->getRepository('EcoleAdminBundle:Page')->findAll();
+        
         return $this->render('EcoleSiteBundle:Site:presentation.html.twig',array(
-            'actualite'=>$this->getAllActualite()
+            'actualite'=>$this->getAllActualite(),
+            'contenus'=>$this->getContenu()
         ));
     }
     
     public function pedagogieAction()
     {
         return $this->render('EcoleSiteBundle:Site:pedagogie.html.twig',array(
-            'actualite'=>$this->getAllActualite()
+            'actualite'=>$this->getAllActualite(),
+            'contenus'=>$this->getContenu()
         ));
     }
     
@@ -96,7 +104,12 @@ class SiteController extends Controller
        //
     }
     
-     private function getActualite(){
+    private function getContenu(){
+        $em = $this->getDoctrine()->getManager();
+        return $em->getRepository('EcoleAdminBundle:Page')->findAll();
+    }
+
+    private function getActualite(){
 	$em = $this->getDoctrine()->getEntityManager();
 	$query = $em->createQuery(
 	 'SELECT a FROM EcoleAdminBundle:Actualite a

@@ -3,16 +3,14 @@
    {% block  content %}
       <div class="row">
         <div class="col-sm-12"> 
-            <h4 class="titre green">Projet pédagogique</h4>
+            <h4 class="titreM green">Projet pédagogique</h4>
             <div id="contenu">
                 <div class="w3-container">
-                    <h3>Projet</h3>
-                    <p>
-                        A car is a wheeled, self-powered motor vehicle used for transportation.
-                        Most definitions of the term specify that cars are designed to run primarily on roads,
-                        to have seating for one to eight people, to typically have for one to eight people,
-                        to typically have four wheels. (Wikipedia)
-                    </p>
+                    {% for contenu in contenus %}
+                        {% if contenu.type == 'pedagogique' %}
+                            {{ contenu.contenu|raw }}
+                        {% endif %}
+                    {% endfor %}
                  </div>
             </div>
             </div> 

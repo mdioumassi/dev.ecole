@@ -5,32 +5,22 @@
         <div class="col-sm-12"> 
             <h4 class="titre teal-l2">Lycée</h4>
             <div id="contenu" style="border-color: teal">
-              <div class="w3-container">
-              <p>Quibus ita sceleste patratis Paulus cruore perfusus reversusque ad principis castra multos coopertos paene catenis adduxit in squalorem deiectos atque maestitiam, quorum adventu intendebantur eculei uncosque parabat carnifex et tormenta. et ex is proscripti sunt plures actique in exilium alii, non nullos gladii consumpsere poenales. nec enim quisquam facile meminit sub Constantio, ubi susurro tenus haec movebantur, quemquam absolutum.</p>
-              <p>Illud autem non dubitatur quod cum esset aliquando virtutum omnium domicilium Roma, ingenuos advenas plerique nobilium, ut Homerici bacarum suavitate Lotophagi, humanitatis multiformibus officiis retentabant.</p>
-            </div>
                <div class="w3-container">
                    <ul class="nav nav-tabs nav-justified">
-                    <li class="active"><a href="{{path('ecole_lycee_insc')}}">Inscription</a></li>
+                    <li class="active"><a href="{{path('ecole_lycee_insc')}}">Objectif</a></li>
                     <li><a href="{{path('ecole_lycee_classe')}}">Classes</a></li>
                     <li><a href="#program">Programmes</a></li>
                     <li><a href="{{path('ecole_lycee_biblio')}}">Bibliothèques</a></li>
                   </ul>
-  
-                    <div class="tab-content w3-border-bottom w3-border-left w3-border-right blanc">
-                      <div id="objectif" class="tab-pane fade in active w3-container">
-                        <h3>Objectifs</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                      </div>
-                      <div id="classe" class="tab-pane fade w3-container">
-                        <h3>Les classes</h3>
-                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                      </div>
-                      <div id="program" class="tab-pane fade w3-container">
-                        <h3>Les programmes</h3>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-                      </div>
-                    
+                  
+                  <div class="tab-content w3-border-bottom w3-border-left w3-border-right blanc">
+                        <div class="w3-container">
+                            {% for contenu in contenus %}
+                                {% if contenu.type == 'lycee' %}
+                                    {{ contenu.contenu|raw }}
+                                {% endif %}
+                             {% endfor %}
+                        </div>
                     </div>
                </div>
             </div>

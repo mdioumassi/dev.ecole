@@ -1,3 +1,11 @@
+ecole_admin_typepage:
+    resource: "@EcoleAdminBundle/Resources/config/routing/typepage.yml"
+    prefix:   /typepage
+
+ecole_admin_page:
+    resource: "@EcoleAdminBundle/Resources/config/routing/page.yml"
+    prefix:   /page
+
 ecole_admin_actualite:
     resource: "@EcoleAdminBundle/Resources/config/routing/actualite.yml"
     prefix:   /actualite
