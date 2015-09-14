@@ -36,7 +36,7 @@ class Page
     private $contenu;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Ecole\AdminBundle\Entity\TypePage")
+     * @ORM\ManyToOne(targetEntity="Ecole\AdminBundle\Entity\TypePage", cascade={"persist"})
      * @ORM\JoinColumn(nullable=false)
      */
     private $type;

@@ -6,6 +6,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
+use Ecole\AdminBundle\Form\TypePageType;
 class PageType extends AbstractType
 {
     /**
@@ -17,7 +18,7 @@ class PageType extends AbstractType
         $builder
             ->add('titre')
             ->add('contenu','textarea', array('attr' => array('class' => 'ckeditor'),'required' => false))
-            ->add('type')
+            ->add('type',new TypePageType())
         ;
     }
     
