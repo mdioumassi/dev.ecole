@@ -2,11 +2,11 @@
     {% block  content %}
         <div class="row">
             <div class="col-sm-12">
-                <h4 class="titre red"><span class="glyphicon glyphicon-tags"></span>&nbsp;&nbsp;Cellule'ACTU</h4>
+                <h4 class="titreM red"><span class="glyphicon glyphicon-tags"></span>&nbsp;&nbsp;Cellule'ACTU</h4>
                    <div id="contenu" style="border-color:red">
                     {% for actu in actualite %}
                       <div class="w3-container w3-card-2">
-                          <h4 class="red">{{ actu.titre }} <span style="float: right">Publié le :{{ actu.timestamp|date("d/m/Y") }}<span></h4> 
+                          <p class="red">{{ actu.titre }} <span style="float: right">Publié le :{{ actu.timestamp|date("d/m/Y") }}<span></p> 
                           <p>{{ actu.contenu|raw  }}</p>
                           </div><br>
                                   {% endfor%} 

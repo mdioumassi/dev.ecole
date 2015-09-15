@@ -5,7 +5,7 @@
           <div class="col-sm-3 side_first">
             {% block sidebar_first %}
                 <h4 class="titreMenu yellow">Cellule'Statistique</h4>
-                <div id="menu">
+                <div id="menu" class="w3-card-2">
                     <div class= "w3-card-2 white">
                         <a href="{{path('ecole_site_stat')}}">
                           <img src="{{asset('bundles/ecolesite/images/stat.png')}}" style="width:100%">
@@ -15,14 +15,18 @@
                         </a>
                     </div>
                 </div> <br>
-                <h4 class="titreMenu red">Cellule'Actualité</h4>
-                <div id="menu" style="border:1px solid red">
+                <h4 class="titreMenu red w3-card-2">Cellule'Actualité</h4>
+                <div id="menu" class="w3-card-2">
                     {% for actu in actualite %}
-                    <div class= "w3-card-2 white">
-                        <h4 class="red">{{ actu.titre }} <span style="float: right">Publié le :{{ actu.timestamp|date("d/m/Y") }}<span></h4> 
-                    </div>
+                   <div class="carousel slide" style="">
+                       <div class="carousel-inner">
+                            <div class="item active w3-card-2 w3-border red w3-padding">
+                                <p>  {{ actu.titre }}</p> 
+                            </div>
+                       </div>
+                   </div>
                     {% endfor %}
-                </div><br>
+                </div>
             {% endblock %}
           </div>
           <div class="col-sm-6 w3-padding-bottom">
@@ -32,16 +36,16 @@
           <div class="col-sm-3 sidebar_second">
             {% block sidebar_second %}
                 <div id="reseaux">
-                  <h4 class="titreMenu yellow">Cellule'RESEAUX</h4>
-                    <div id="menu">
+                  <h4 class="titreMenu yellow w3-card-2">Cellule'RESEAUX</h4>
+                    <div id="menu" class="w3-card-2">
                         <div class="w3-container w3-padding-bottom w3-card-2">
                             <div class="fb-like-box" data-href="https://www.facebook.com/pages/Cellule-du-Savoir/448685748623613" data-width="210" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>
                         </div>
                     </div>
                 </div>
               <div id="presentation">
-                <h4 class="titreMenu yellow"><span class="glyphicon glyphicon-book"></span>&nbsp;&nbsp;Notre Ecole</h4>
-                <div id="menu">
+                <h4 class="titreMenu yellow w3-card-2"><span class="glyphicon glyphicon-book"></span>&nbsp;&nbsp;Notre Ecole</h4>
+                <div id="menu" class="w3-card-2">
                    <ul class="w3-ul w3-card-2 white">     
                        <li id="present"><a href="{{path('ecole_site_presentation')}}">Présentation</a></li>
                        <li id="pedag"><a href="{{path('ecole_site_pedagogie')}}">Projet pédagogique</a></li>
@@ -53,8 +57,8 @@
                </div>
                   <br>
                 <div id="coord">
-                  <h4 class="titreMenu yellow"> <span class="glyphicon glyphicon-map-marker"></span>&nbsp;Cellule'Coordonnée</h4>
-                  <div id="menu" class="w3-padding-bottom">
+                  <h4 class="titreMenu yellow w3-card-2"> <span class="glyphicon glyphicon-map-marker"></span>&nbsp;Cellule'Coordonnée</h4>
+                  <div id="menu" class="w3-padding-bottom w3-card-2">
                     <div class="w3-container w3-card-2 w3-padding-top w3-padding-bottom white">
                       <div><img src="{{asset('bundles/ecolesite/images/icones/home.jpeg')}}" style="width: 30px; height:30px;"/><span>&nbsp;&nbsp;Sebkha - Basra</span></div><br>
                       <div> <img src="{{asset('bundles/ecolesite/images/icones/phone.jpeg')}}" style="width: 32px; height:32px;"/><span>&nbsp;(+222)46332817,46445530</span></div><br>
@@ -65,7 +69,6 @@
             {% endblock %}
           </div>
       </div>
-
 {% endblock %}
 
      

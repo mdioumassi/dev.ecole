@@ -6,7 +6,6 @@ html, body {height:100%;margin:0; background-color: #FFFFE0;font-family: 'Open S
     border-radius: 10px;
 }
     #page-wrapper{
-            border:1px solid red;
            width: 90%;
           	 margin-left: auto;
              margin-right: auto; 
@@ -167,12 +166,12 @@ footer{
     margin-top:0px;
     color: #fff;
     font-weight: bold;
-    width: 106%;
+    width: 105%;
      margin-left: -15px;
 }
 #contenu{
     border:1px solid #009900; 
-    width: 106%;
+    width: 105%;
     padding: 10px;
     margin-top: -14px;
     margin-left: -2px;
