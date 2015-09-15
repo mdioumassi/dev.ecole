@@ -22,7 +22,8 @@
         "incenteev/composer-parameter-handler": "~2.0",
         "ikimea/ckeditor-bundle": "dev-master",
         "egeloen/ckeditor-bundle": "^3.0",
-        "sonata-project/admin-bundle": "^2.3"
+        "sonata-project/admin-bundle": "^2.3",
+         "sonata-project/block-bundle": "~2.2"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3"
