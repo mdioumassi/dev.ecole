@@ -52,6 +52,14 @@ class SiteController extends Controller
         ));
     }
     
+    public function surveilleAction()
+    {
+        return $this->render('EcoleSiteBundle:Site/Etude:surveille.html.twig',array(
+            'actualite'=>$this->getAllActualite(),
+            'contenus'=>$this->getContenu()
+        ));
+    }
+    
     public function primaireAction()
     {
         return $this->render('EcoleSiteBundle:Site:primaire.html.twig',array(

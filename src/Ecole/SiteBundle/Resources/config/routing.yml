@@ -13,6 +13,10 @@ ecole_site_presentation:
 ecole_site_pedagogie:
     path:     /pedagogie
     defaults: { _controller: EcoleSiteBundle:Site:pedagogie }
+
+ecole_pedagogie_surveille:
+    path:     /pedagogie/surveille
+    defaults: { _controller: EcoleSiteBundle:Site:surveille }
     
 ecole_site_primaire:
     path:     /primaire

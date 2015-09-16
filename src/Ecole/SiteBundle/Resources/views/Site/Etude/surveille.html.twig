@@ -8,13 +8,13 @@
             <div id="contenu">
               <div class="w3-container">
                  <ul class="nav nav-tabs nav-justified">
-                    <li class="active"><a href="">Etude dirigées</a></li>
-                    <li><a href="{{path('ecole_pedagogie_surveille')}}">Etude surveillées</a></li>
+                    <li><a href="{{path('ecole_site_pedagogie')}}">Etude dirigées</a></li>
+                    <li  class="active"><a href="{{path('ecole_pedagogie_surveille')}}">Etude surveillées</a></li>
                  </ul>
                    <div class="tab-content w3-border-bottom w3-border-left w3-border-right blanc">
                     <div class="w3-container">
                         {% for contenu in contenus %}
-                            {% if contenu.type == 'dirigee' %}
+                            {% if contenu.type == 'surveillee' %}
                                 {{ contenu.contenu|raw }}
                             {% endif %}
                          {% endfor %}
