@@ -1,0 +1,54 @@
+{% extends "EcoleSiteBundle::layout.html.twig" %}
+ 
+{% block  content %}
+   <div class="row">
+     <div class="col-sm-12"> 
+         <h4 class="titreM light-green">Collège</h4>
+         <div id="contenu" style="border-color: green">
+            <div class="w3-container">
+                <p style="text-align: justify">
+
+                </p>
+            </div>
+            <div class="w3-container">
+               <ul class="nav nav-tabs nav-justified">
+                 <li><a href="{{path('ecole_college_objectif')}}">Objectifs</a></li>
+                 <li><a href="{{path('ecole_college_classe')}}">Classes</a></li>
+                 <li><a href="{{path('ecole_college_program')}}">Programmes</a></li>
+                 <li class="active"><a href="{{path('ecole_college_biblio')}}">Bibliothèques</a></li>
+               </ul>
+ 
+                 <div class="tab-content w3-border-bottom w3-border-left w3-border-right blanc">
+                     <div class="w3-container">
+                          <div class="w3-padding-bottom" style="width:50%">
+                                <img src="{{asset('bundles/ecolesite/images/pageMade.jpg')}}" alt="En construction" style="width:100%">
+                              </div>
+                         <table border="1">
+                             <thead>
+                                 <tr><th>Titre</th><th>Matière</th><th>Visualiser</th></tr>
+                             </thead>
+                             <tbody>
+                                 <tr>
+                                     <td>Epreuve Bac 2015</td><td>Mathématique</td><td><a href="">Télécharger</a></</td>
+                                 </tr>
+                             </tbody>
+                         </table>
+                     </div>
+                 </div>
+            </div>
+         </div>
+     </div> 
+   </div>    
+    {% block javascript %}     
+       <script>
+              $(function(){
+                 $('#notrecole').addClass('active');
+                 $('#home').removeClass('active');
+                 $('#lycee').addClass('yellow');
+                 $('#reseaux').hide();
+              });
+          </script>
+    {% endblock %}
+   {% endblock %}  
+
+

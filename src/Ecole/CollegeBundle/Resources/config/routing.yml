@@ -1,0 +1,19 @@
+ecole_college:
+    path:     /
+    defaults: { _controller: EcoleCollegeBundle:College:index }
+
+ecole_college_objectif:
+    path:     /objectif
+    defaults: { _controller: EcoleCollegeBundle:College:objectif }
+
+ecole_college_biblio:
+    path:     /biblio
+    defaults: { _controller: EcoleCollegeBundle:College:biblio }
+
+ecole_college_program:
+    path:     /program
+    defaults: { _controller: EcoleCollegeBundle:College:program }
+    
+ecole_college_classe:
+    path:     /classe
+    defaults: { _controller: EcoleCollegeBundle:College:classe }

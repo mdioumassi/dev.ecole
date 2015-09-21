@@ -1,0 +1,19 @@
+ecole_primaire:
+    path:     /
+    defaults: { _controller: EcolePrimaireBundle:Primaire:index }
+
+ecole_primaire_objectif:
+    path:     /objectif
+    defaults: { _controller: EcolePrimaireBundle:Primaire:objectif }
+
+ecole_primaire_biblio:
+    path:     /biblio
+    defaults: { _controller: EcolePrimaireBundle:Primaire:biblio }
+
+ecole_primaire_program:
+    path:     /program
+    defaults: { _controller: EcolePrimaireBundle:Primaire:program }
+    
+ecole_primaire_classe:
+    path:     /classe
+    defaults: { _controller: EcolePrimaireBundle:Primaire:classe }

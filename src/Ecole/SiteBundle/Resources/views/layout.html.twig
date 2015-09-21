@@ -4,7 +4,84 @@
       <div class="row" style="margin-top: -10px; margin-left: auto; margin-right: auto;">
           <div class="col-sm-3 side_first">
             {% block sidebar_first %}
-                <h4 class="titreMenu yellow">Cellule'Statistique</h4>
+                <h4 class="titreMenu yellow w3-card-2"><span class="glyphicon glyphicon-book"></span>Menu principal</h4>
+                <div id="menu" class="w3-card-2">
+                  <div class="panel-group" id="accordion">
+                    <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a href="{{path('ecole_site_homepage')}}"><span class="glyphicon glyphicon-home">
+                            </span>Accueil</a>
+                        </h4>
+                    </div>
+                    </div>
+                   <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-th-list">
+                            </span>Cellule du Savoir</a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <table class="table">
+                                <tr>
+                                    <td>
+                                        <a id="menupresent" href="{{path('ecole_site_presentation')}}"><span class="glyphicon glyphicon-file"></span>Présentation</a>        
+                                    </td>
+                                </tr>
+                                <tr>
+                                     <td>
+                                        <a href=""><span class="glyphicon glyphicon-th text-primary"></span>Galerie</a>        
+                                     </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                     <a href="{{path('ecole_site_presentation')}}">  <span class="glyphicon glyphicon-pencil text-primary"></span>Nos cursus</a>        
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                   </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><span class="glyphicon glyphicon-th-list">
+                                </span>Notre Ecole</a>
+                            </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <table class="table">
+                                    <tr>
+                                        <td>
+                                            <span class="glyphicon glyphicon-pencil text-primary"></span><a href="{{path('ecole_site_pedagogie')}}">Projet pédagique</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="glyphicon glyphicon-flash text-success"></span><a href="{{path('ecole_primaire')}}">Cellule'Primaire</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="glyphicon glyphicon-file text-info"></span><a href="{{path('ecole_college')}}">Cellule'Collège</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="glyphicon glyphicon-file text-info"></span><a href="{{path('ecole_lycee')}}">Cellule'Lycée</a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+           
+            </div>
+                </div><br>
+                <h4 class="titreMenu yellow w3-card-2"><span class="glyphicon glyphicon-book"></span>Cellule'Statistique</h4>
                 <div id="menu" class="w3-card-2">
                     <div class= "w3-card-2 white">
                         <a href="{{path('ecole_site_stat')}}">
@@ -14,7 +91,7 @@
                                 </div>
                         </a>
                     </div>
-                </div> <br>
+                </div> <br><!--
                 <h4 class="titreMenu red w3-card-2">Cellule'Actualité</h4>
                 <div id="menu" class="w3-card-2">
                     {% for actu in actualite %}
@@ -26,7 +103,7 @@
                        </div>
                    </div>
                     {% endfor %}
-                </div>
+                </div>-->
             {% endblock %}
           </div>
           <div class="col-sm-6 w3-padding-bottom">
@@ -39,7 +116,7 @@
                   <h4 class="titreMenu yellow w3-card-2">Cellule'RESEAUX</h4>
                     <div id="menu" class="w3-card-2">
                         <div class="w3-container w3-padding-bottom w3-card-2">
-                            <div class="fb-like-box" data-href="https://www.facebook.com/pages/Cellule-du-Savoir/448685748623613" data-width="210" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>
+                            <div class="fb-like-box" data-href="https://www.facebook.com/pages/Cellule-du-Savoir/448685748623613" data-width="215" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>
                         </div>
                     </div>
                 </div>
@@ -47,41 +124,22 @@
                 <h4 class="titreMenu yellow w3-card-2"><span class="glyphicon glyphicon-book"></span>&nbsp;&nbsp;Notre Ecole</h4>
                 <div id="menu" class="w3-card-2">
                   <div class="panel-group" id="accordion">
-                   <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-folder-close">
-                            </span>Cellule du Savoir</a>
-                        </h4>
-                    </div>
-                    <div id="collapseOne" class="panel-collapse collapse in">
-                        <div class="panel-body">
-                            <table class="table">
-                                <tr>
-                                    <td>
-                                        <span class="glyphicon glyphicon-pencil text-primary"></span><a href="{{path('ecole_site_presentation')}}">Présentation</a>        
-                                     </td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                    
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-folder-close">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"><span class="glyphicon glyphicon-th-list">
                                 </span>Projet Pédagogique</a>
                             </h4>
                         </div>
-                        <div id="collapseTwo" class="panel-collapse collapse">
+                        <div id="collapseThree" class="panel-collapse collapse">
                             <div class="panel-body">
                                 <table class="table">
                                     <tr>
                                         <td>
-                                            <span class="glyphicon glyphicon-pencil text-primary"></span><a href="{{path('ecole_site_pedagogie')}}">Etudes</a>
+                                            <span class="glyphicon glyphicon-pencil text-primary"></span><a href="{{path('ecole_site_pedagogie')}}">Les Etudes</a>
                                         </td>
                                     </tr>
-                                    <tr>
+                                <!--    <tr>
                                         <td>
                                             <span class="glyphicon glyphicon-flash text-success"></span><a href="">News</a>
                                         </td>
@@ -90,7 +148,7 @@
                                         <td>
                                             <span class="glyphicon glyphicon-file text-info"></span><a href="http://www.jquery2dotnet.com">Newsletters</a>
                                         </td>
-                                    </tr>
+                                    </tr>-->
                                 </table>
                             </div>
                         </div>
@@ -98,32 +156,27 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><span class="glyphicon glyphicon-th">
-                            </span>Notre Cursus</a>
+                            <a id="menuprimaire" href="{{path('ecole_primaire')}}"><span class="glyphicon glyphicon-file">
+                            </span>Cellule'Primaire</a>
                         </h4>
                     </div>
-                    <div id="collapseThree" class="panel-collapse collapse">
-                        <div class="panel-body">
-                            <table class="table">
-                                <tr>
-                                    <td>
-                                        <span class="glyphicon glyphicon-file text-info"></span><a href="{{path('ecole_site_primaire')}}">Primaire</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <span class="glyphicon glyphicon-file text-info"></span><a href="{{path('ecole_site_college')}}">Collège</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <span class="glyphicon glyphicon-file text-info"></span><a href="{{path('ecole_lycee_homepage')}}">Lycée</a>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
                 </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a id="menucollege"  href="{{path('ecole_college')}}"><span class="glyphicon glyphicon-file">
+                            </span>Cellule'Collège</a>
+                        </h4>
+                    </div>
+                </div>            
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a id="menulycee"  href="{{path('ecole_lycee')}}"><span class="glyphicon glyphicon-file">
+                            </span>Cellule'Lycée</a>
+                        </h4>
+                    </div>
+                </div>            
             </div>
       
                 </div>

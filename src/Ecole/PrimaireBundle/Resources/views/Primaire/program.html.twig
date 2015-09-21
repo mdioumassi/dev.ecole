@@ -1,0 +1,50 @@
+{% extends "EcoleSiteBundle::layout.html.twig" %}
+ 
+   {% block  content %}
+      <div class="row">
+        <div class="col-sm-12"> 
+            <h4 class="titreM orange">Primaire</h4>
+            <div id="contenu" style="border-color: orange">
+                 <div class="w3-container">
+                    <p style="text-align: justify">
+                        
+                    </p>
+                </div>
+               <div class="w3-container">
+                  <ul class="nav nav-tabs nav-justified">
+                    <li><a href="{{path('ecole_primaire_objectif')}}">Objectifs</a></li>
+                    <li><a href="{{path('ecole_primaire_classe')}}">Classes</a></li>
+                    <li class="active"><a href="{{path('ecole_primaire_program')}}">Programmes</a></li>
+                    <li><a href="{{path('ecole_primaire_biblio')}}">Bibliothèques</a></li>
+                  </ul>
+  
+                    <div class="tab-content w3-border-bottom w3-border-left w3-border-right blanc">
+                        <div class="w3-container">
+                             <div class="w3-padding-bottom" style="width:50%">
+                                <img src="{{asset('bundles/ecolesite/images/pageMade.jpg')}}" alt="En construction" style="width:100%">
+                              </div>
+                            {% for contenu in contenus %}
+                                {% if contenu.type == 'primaireProgram' %}
+                                    {{ contenu.contenu|raw }}
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+               </div>
+            </div>
+        </div> 
+      </div>    
+        {% block javascript %}     
+           <script>
+              $(function(){
+                 $('#notrecole').addClass('active');
+                 $('#home').removeClass('active');
+                 $('#lycee').addClass('yellow');
+                 $('#reseaux').hide();
+              });
+          </script>
+        {% endblock %}
+   {% endblock %}  
+  
+
+

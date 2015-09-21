@@ -3,25 +3,25 @@
    {% block  content %}
       <div class="row">
         <div class="col-sm-12"> 
-            <h4 class="titreM teal-l2">Lycée</h4>
-            <div id="contenu" style="border-color: teal">
+            <h4 class="titreM light-green">Collège</h4>
+            <div id="contenu" style="border-color: green">
                 <div class="w3-container">
                     <p style="text-align: justify">
-                        Le lycée actuel correspond principalement aux trois dernières années de l'enseignement secondaire (seconde, première et terminale), pour des adolescents âgés, généralement, de 15-16 ans (début de la seconde) à 19-20 ans (fin de la terminale). Les enseignements au lycée aboutissent à des examens finaux: le baccalauréat, le BREVET. Néanmoins, un certain nombre de filières relevant de l'enseignement supérieur, comme les BTS.
+                      
                     </p>
                 </div>
                <div class="w3-container">
-                   <ul class="nav nav-tabs nav-justified">
-                    <li class="active"><a href="{{path('ecole_lycee_objectif')}}">Objectif</a></li>
-                    <li><a href="{{path('ecole_lycee_classe')}}">Classes</a></li>
-                    <li><a href="#program">Programmes</a></li>
-                    <li><a href="{{path('ecole_lycee_biblio')}}">Bibliothèques</a></li>
+                  <ul class="nav nav-tabs nav-justified">
+                    <li class="active"><a href="{{path('ecole_college_objectif')}}">Objectifs</a></li>
+                    <li><a href="{{path('ecole_college_classe')}}">Classes</a></li>
+                    <li><a href="{{path('ecole_college_program')}}">Programmes</a></li>
+                    <li><a href="{{path('ecole_college_biblio')}}">Bibliothèques</a></li>
                   </ul>
                   
                   <div class="tab-content w3-border-bottom w3-border-left w3-border-right blanc">
                         <div class="w3-container">
                             {% for contenu in contenus %}
-                                {% if contenu.type == 'objectifLycee' %}
+                                {% if contenu.type == 'objectifCollege' %}
                                     {{ contenu.contenu|raw }}
                                 {% endif %}
                              {% endfor %}
@@ -38,7 +38,7 @@
                  $('#home').removeClass('active');
                   $('#lycee').addClass('yellow');
                   $('#reseaux').hide();
-                 $('#menulycee').css("color","teal");
+                 $('#menucollege').css("color","green");
               });
           </script>
         {% endblock %}
