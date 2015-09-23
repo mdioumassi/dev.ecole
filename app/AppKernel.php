@@ -20,6 +20,8 @@ class AppKernel extends Kernel
             new Ecole\SiteBundle\EcoleSiteBundle(),
             new Ecole\AdminBundle\EcoleAdminBundle(),
             new Ecole\LyceeBundle\EcoleLyceeBundle(),
+             new Ecole\PrimaireBundle\EcolePrimaireBundle(),
+             new Ecole\CollegeBundle\EcoleCollegeBundle(),
           
         );
 

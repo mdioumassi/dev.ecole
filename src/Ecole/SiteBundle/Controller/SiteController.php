@@ -59,29 +59,7 @@ class SiteController extends Controller
             'contenus'=>$this->getContenu()
         ));
     }
-    
-    public function primaireAction()
-    {
-        return $this->render('EcoleSiteBundle:Site:primaire.html.twig',array(
-            'actualite'=>$this->getAllActualite()
-        ));
-    }
-    
-    public function collegeAction()
-    {
-        return $this->render('EcoleSiteBundle:Site:college.html.twig',array(
-            'actualite'=>$this->getAllActualite()
-        ));
-    }
-    
-    public function lyceeAction()
-    {
-        return $this->render('EcoleSiteBundle:Site:lycee/lycee.html.twig',array(
-            'actualite'=>$this->getAllActualite()
-        ));
-    }
-
-    
+   
     public function contactAction(Request $request)
     {
         //$request = $this->getRequest();

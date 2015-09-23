@@ -5,6 +5,10 @@ ecole_site_homepage:
 ecole_site_actualite:
     path:     /actualite
     defaults: { _controller: EcoleSiteBundle:Site:actualite }
+    
+ecole_site_contact:
+    path:     /contact
+    defaults: { _controller: EcoleSiteBundle:Site:contact }
 
 ecole_site_presentation:
     path:     /presentation

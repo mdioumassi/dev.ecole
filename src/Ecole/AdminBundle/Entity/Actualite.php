@@ -41,6 +41,13 @@ class Actualite
      * @ORM\Column(name="timestamp", type="datetime")
      */
     private $timestamp;
+    
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="path", type="string", length=255)
+     */
+    private $path;
 
     /**
      * @var boolean
@@ -150,5 +157,28 @@ class Actualite
     public function getActive()
     {
         return $this->active;
+    }
+
+    /**
+     * Set path
+     *
+     * @param string $path
+     * @return Actualite
+     */
+    public function setPath($path)
+    {
+        $this->path = $path;
+
+        return $this;
+    }
+
+    /**
+     * Get path
+     *
+     * @return string 
+     */
+    public function getPath()
+    {
+        return $this->path;
     }
 }
