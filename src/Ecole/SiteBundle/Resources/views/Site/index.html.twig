@@ -2,6 +2,15 @@
     {% block  content %}
           <div class="row">
             <div class="col-sm-12">
+               <h4 class="titreM red"><span class="glyphicon glyphicon-tags"></span>&nbsp;ACTUALITES</h4>
+               <div id="contenu" style="border-color:red;">
+                {% for actu in actualite %}
+                  <div class="w3-container w3-card-2">
+                      <p class="red" style="border:1px solid red;margin-left: -16px; padding: 10px; width:106% ">{{ actu.titre }} <span style="float: right">Publié le :{{ actu.timestamp|date("d/m/Y") }}<span></p> 
+                      <p>{{ actu.contenu|raw  }}</p>
+                  </div><br>
+                {% endfor%} 
+               </div><br>
                 <h4 class="titreM green w3-card-2"> <span class="glyphicon glyphicon-tags"></span> &nbsp;&nbsp;La Cellule du Savoir</h4>
                  <div id="contenu" class="w3-card-2">
                   <div class="w3-container">
