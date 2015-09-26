@@ -2,6 +2,15 @@ ecole_site_homepage:
     path:     /
     defaults: { _controller: EcoleSiteBundle:Site:index }
 
+ecole_site_preinsc:
+    path:     /preinscription
+    defaults: { _controller: EcoleSiteBundle:Site:preinscripion }
+
+eleve_create:
+    path:     /
+    defaults: { _controller: "EcoleSiteBundle:Site:create" }
+    methods:  POST
+    
 ecole_site_actualite:
     path:     /actualite
     defaults: { _controller: EcoleSiteBundle:Site:actualite }

@@ -1,14 +1,18 @@
-ecole_lycee_homepage:
+ecole_lycee:
     path:     /
     defaults: { _controller: EcoleLyceeBundle:Lycee:index }
+
+ecole_lycee_objectif:
+    path:     /objectif
+    defaults: { _controller: EcoleLyceeBundle:Lycee:objectif }
 
 ecole_lycee_biblio:
     path:     /biblio
     defaults: { _controller: EcoleLyceeBundle:Lycee:biblio }
 
-ecole_lycee_insc:
-    path:     /inscription
-    defaults: { _controller: EcoleLyceeBundle:Lycee:insc }
+ecole_lycee_program:
+    path:     /program
+    defaults: { _controller: EcoleLyceeBundle:Lycee:program }
     
 ecole_lycee_classe:
     path:     /classe

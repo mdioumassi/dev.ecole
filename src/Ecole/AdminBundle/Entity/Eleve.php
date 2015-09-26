@@ -42,13 +42,18 @@ class Eleve
      */
     private $age;
     
-      /**
+    /**
      * @ORM\ManyToOne(targetEntity="Ecole\AdminBundle\Entity\Cursus", cascade={"persist"})
      * @ORM\JoinColumn(nullable=false)
      */
     private $cursus;
-
-
+    
+    
+     /**
+     * @ORM\ManyToOne(targetEntity="Ecole\AdminBundle\Entity\Correspondant", cascade={"persist"})
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $correspondant;
     /**
      * Get id
      *
@@ -126,5 +131,52 @@ class Eleve
     public function getAge()
     {
         return $this->age;
+    }
+
+    /**
+     * Set cursus
+     *
+     * @param \Ecole\AdminBundle\Entity\Cursus $cursus
+     * @return Eleve
+     */
+    public function setCursus(\Ecole\AdminBundle\Entity\Cursus $cursus)
+    {
+        $this->cursus = $cursus;
+
+        return $this;
+    }
+
+    /**
+     * Get cursus
+     *
+     * @return \Ecole\AdminBundle\Entity\Cursus 
+     */
+    public function getCursus()
+    {
+        return $this->cursus;
+    }
+
+
+    /**
+     * Set correspondant
+     *
+     * @param \Ecole\AdminBundle\Entity\Correspondant $correspondant
+     * @return Eleve
+     */
+    public function setCorrespondant(\Ecole\AdminBundle\Entity\Correspondant $correspondant)
+    {
+        $this->correspondant = $correspondant;
+
+        return $this;
+    }
+
+    /**
+     * Get correspondant
+     *
+     * @return \Ecole\AdminBundle\Entity\Correspondant 
+     */
+    public function getCorrespondant()
+    {
+        return $this->correspondant;
     }
 }

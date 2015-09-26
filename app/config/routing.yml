@@ -1,3 +1,11 @@
+ecole_primaire:
+    resource: "@EcolePrimaireBundle/Resources/config/routing.yml"
+    prefix:   /primaire
+
+ecole_college:
+    resource: "@EcoleCollegeBundle/Resources/config/routing.yml"
+    prefix:   /college
+
 ecole_lycee:
     resource: "@EcoleLyceeBundle/Resources/config/routing.yml"
     prefix:   /lycee

@@ -6,7 +6,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
-use Ecole\AdminBundle\Form\CursusType;
+use Ecole\AdminBundle\Form\CorrespondantType;
 
 class EleveType extends AbstractType
 {
@@ -20,8 +20,13 @@ class EleveType extends AbstractType
             ->add('nom')
             ->add('prenom')
             ->add('age')
-            ->add('cursus', new Cursus())
-        ;
+            ->add('cursus','entity', array(
+                  'class'    => 'EcoleAdminBundle:Cursus',
+                  'property' => 'nom',
+                  'multiple' => false,
+                  'expanded'=>true)
+                )
+            ->add('correspondant',new CorrespondantType());
     }
     
     /**

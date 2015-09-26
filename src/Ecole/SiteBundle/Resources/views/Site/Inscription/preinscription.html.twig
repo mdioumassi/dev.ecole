@@ -1,0 +1,77 @@
+{% extends "EcoleSiteBundle::layout.html.twig" %}
+    {% block  content %}
+        <div class="row">
+            <div class="col-sm-12">
+               <h4 class="titreM yellow"><span class="glyphicon glyphicon-tags"></span>&nbsp;Pré-inscription</h4>
+                <div id="contenu" class="w3-card-2">
+                   <form role="form" name="ecole_adminbundle_eleve" method="post" action="/app_dev.php/create">
+                      <fieldset class="well">
+                        <legend class="w3-border w3-margin-top grey-l4" style="padding-left: 10px; border-radius: 10px; font-size: 16px; width: 40%">Elève</legend>
+                        <div class="form-group">
+                           <label for="ecole_adminbundle_eleve_nom" class="required">Nom:</label> 
+                            <input class="form-control" type="text" id="ecole_adminbundle_eleve_nom" name="ecole_adminbundle_eleve[nom]" required="required" maxlength="255" />
+                        </div>
+
+                        <div class="form-group">
+                           <label for="ecole_adminbundle_eleve_prenom" class="required">Prenom:</label>
+                            <input class="form-control" type="text" id="ecole_adminbundle_eleve_prenom" name="ecole_adminbundle_eleve[prenom]" required="required" maxlength="255" />
+                        </div>
+                        <div class="form-group">
+                            <label for="ecole_adminbundle_eleve_age" class="required">Age</label>
+                            <input class="form-control" type="number" id="ecole_adminbundle_eleve_age" name="ecole_adminbundle_eleve[age]" required="required" />
+                        </div>
+                      </fieldset>
+                     <fieldset class="well">
+                       <legend class="w3-border w3-margin-top grey-l4" style="padding-left: 10px;border-radius: 10px; font-size: 16px; width: 40%">Cursus</legend>
+                           <div id="ecole_adminbundle_eleve_cursus">
+                              <input type="radio" id="ecole_adminbundle_eleve_cursus_1" name="ecole_adminbundle_eleve[cursus]" required="required" value="1" /> 
+                              <label for="ecole_adminbundle_eleve_cursus_1" class="required">Marternelle</label>
+                              <input type="radio" id="ecole_adminbundle_eleve_cursus_2" name="ecole_adminbundle_eleve[cursus]" required="required" value="2" />                
+                              <label for="ecole_adminbundle_eleve_cursus_2" class="required">Primaire</label>&nbsp;&nbsp;<input type="radio" id="ecole_adminbundle_eleve_cursus_3" name="ecole_adminbundle_eleve[cursus]" required="required" value="3" />                
+                              <label for="ecole_adminbundle_eleve_cursus_3" class="required">Collège</label>&nbsp;&nbsp;<input type="radio" id="ecole_adminbundle_eleve_cursus_4" name="ecole_adminbundle_eleve[cursus]" required="required" value="4" />                
+                              <label for="ecole_adminbundle_eleve_cursus_4" class="required">Lycée</label>
+                            </div>
+                      </fieldset>
+                     <fieldset class="well">
+                      <legend class="w3-border w3-margin-top grey-l4" style="padding-left: 10px; border-radius: 10px; font-size: 16px; width: 40%">Correspondant</legend>
+                      <div>
+                          <div id="ecole_adminbundle_eleve_correspondant">
+                            <div class="form-group">
+                              <label for="ecole_adminbundle_eleve_correspondant_nom" class="required">Nom</label>
+                              <input class="form-control" type="text" id="ecole_adminbundle_eleve_correspondant_nom" name="ecole_adminbundle_eleve[correspondant][nom]" required="required" maxlength="255" />
+                            </div>
+                            <div class="form-group">
+                              <label for="ecole_adminbundle_eleve_correspondant_prenom" class="required">Prénom:</label>
+                              <input class="form-control" type="text" id="ecole_adminbundle_eleve_correspondant_prenom" name="ecole_adminbundle_eleve[correspondant][prenom]" required="required" maxlength="255" />
+                            </div>
+                            <div class="form-group">               
+                                <label for="ecole_adminbundle_eleve_correspondant_telephone" class="required">Téléphone:</label>
+                                <input class="form-control" type="number" id="ecole_adminbundle_eleve_correspondant_telephone" name="ecole_adminbundle_eleve[correspondant][telephone]" required="required" />
+                            </div>
+                            <div class="form-group">                
+                                <label for="ecole_adminbundle_eleve_correspondant_email" class="required">Email:</label>
+                                <input class="form-control" type="text" id="ecole_adminbundle_eleve_correspondant_email" name="ecole_adminbundle_eleve[correspondant][email]" required="required" maxlength="255" />
+                            </div>
+                            <div class="form-group">                
+                              <label for="ecole_adminbundle_eleve_correspondant_lienParente" class="required">Lien de parenté</label>
+                              <input class="form-control" type="text" id="ecole_adminbundle_eleve_correspondant_lienParente" name="ecole_adminbundle_eleve[correspondant][lienParente]" required="required" maxlength="255" />
+                            </div>
+                          </div>
+                      </div>
+                     </fieldset>
+                  <div><button type="submit" class="btn btn-primary" id="ecole_adminbundle_eleve_submit" name="ecole_adminbundle_eleve[submit]">Enregistrer</button></div><input type="hidden" id="ecole_adminbundle_eleve__token" name="ecole_adminbundle_eleve[_token]" value="xHXSMe7d_H7LtVRokhBz1BTEli56mpPW0bucrdyfBm0" />
+                   </form>
+                  </div>
+                </div>
+        </div>
+        {% block javascript %}     
+          <script>
+              $(function(){
+                 $('#presentation').hide();
+              });
+          </script>
+        {% endblock %}
+   {% endblock %}
+    
+
+  

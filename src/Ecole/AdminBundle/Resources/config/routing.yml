@@ -1,3 +1,7 @@
+ecole_admin_correspondant:
+    resource: "@EcoleAdminBundle/Resources/config/routing/correspondant.yml"
+    prefix:   /correspondant
+
 ecole_admin_eleve:
     resource: "@EcoleAdminBundle/Resources/config/routing/eleve.yml"
     prefix:   /eleve

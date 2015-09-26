@@ -22,10 +22,19 @@ class LyceeController extends Controller
         ));
     }
     
-    public function inscAction()
+    public function objectifAction()
     {
-        return $this->render('EcoleLyceeBundle:Lycee:inscription.html.twig',array(
-            'actualite'=>$this->getAllActualite()
+        return $this->render('EcoleLyceeBundle:Lycee:objectif.html.twig',array(
+            'actualite'=>$this->getAllActualite(),
+            'contenus'=>$this->getContenu()
+        ));
+    }
+    
+     public function programAction()
+    {
+        return $this->render('EcoleLyceeBundle:Lycee:program.html.twig',array(
+            'actualite'=>$this->getAllActualite(),
+             'contenus'=>$this->getContenu()
         ));
     }
     
