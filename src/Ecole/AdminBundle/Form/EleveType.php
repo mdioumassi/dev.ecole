@@ -18,7 +18,7 @@ class EleveType extends AbstractType
     {
         $builder
             ->add('nom')
-            ->add('prenom')
+            ->add('prenom','text')
             ->add('age')
             ->add('cursus','entity', array(
                   'class'    => 'EcoleAdminBundle:Cursus',
@@ -44,6 +44,6 @@ class EleveType extends AbstractType
      */
     public function getName()
     {
-        return 'ecole_adminbundle_eleve';
+        return 'eleve';
     }
 }
