@@ -44,6 +44,14 @@ class LyceeController extends Controller
             'actualite'=>$this->getAllActualite()
         ));
     }
+    
+    public function videoAction()
+    {
+        return $this->render('EcoleLyceeBundle:Lycee:video.html.twig',array(
+            'actualite'=>$this->getAllActualite()
+        ));
+    }
+    
     private function getAllActualite(){
 	$em = $this->getDoctrine()->getEntityManager();
 	$query = $em->createQuery(

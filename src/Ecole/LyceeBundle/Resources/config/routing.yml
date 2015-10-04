@@ -17,3 +17,7 @@ ecole_lycee_program:
 ecole_lycee_classe:
     path:     /classe
     defaults: { _controller: EcoleLyceeBundle:Lycee:classe }
+    
+ecole_lycee_video:
+    path:     /video
+    defaults: { _controller: EcoleLyceeBundle:Lycee:video }
