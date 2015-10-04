@@ -7,7 +7,7 @@ ecole_site_preinsc:
     defaults: { _controller: EcoleSiteBundle:Site:preinscripion }
 
 eleve_create:
-    path:     /
+    path:     /creer
     defaults: { _controller: "EcoleSiteBundle:Site:create" }
     methods:  POST
     

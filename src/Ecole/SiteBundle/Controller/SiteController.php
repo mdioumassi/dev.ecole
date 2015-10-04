@@ -17,7 +17,7 @@ class SiteController extends Controller {
     ));
   }
 
-  public function preinscripionAction(Request $request) {
+  public function preinscripionAction() {
         $entity = new Eleve();
         $form = $this->createCreateForm($entity);
     return $this->render('EcoleSiteBundle:Site/Inscription:preinscription.html.twig', array(
@@ -35,7 +35,6 @@ class SiteController extends Controller {
         $entity = new Eleve();
         $form = $this->createCreateForm($entity);
         $form->handleRequest($request);
-
         if ($form->isValid()) {
             $em = $this->getDoctrine()->getManager();
             $em->persist($entity);
