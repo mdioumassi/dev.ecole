@@ -4,29 +4,97 @@
             <div class="col-sm-12">
                <h4 class="titreM yellow"><span class="glyphicon glyphicon-tags"></span>&nbsp;Pré-inscription</h4>
                 <div id="contenu" class="w3-card-2">
-                  <div class="form-group">
-                    
-                  </div>
-                  
+                  <fieldset class="well"><legend class="w3-border w3-margin-top grey-l4" style="padding-left: 10px; border-radius: 10px; font-size: 16px; width: 60%,text-transform: upp">Fiche d'inscription 2015 - 2016</legend>
                   {{ form_start(form) }}
                   <fieldset class="well"><legend class="w3-border w3-margin-top grey-l4" style="padding-left: 10px; border-radius: 10px; font-size: 16px; width: 40%">Elève</legend>
-                    <div class="form-group">
-                        {{ form_label(form.nom, 'Nom:')}}
-                        {{ form_errors(form.nom) }}
-                        {{ form_widget(form.nom) }}
-                    </div>
-                     <div class="form-group">
-                        {{ form_label(form.prenom, 'Prenom:')}}
-                        {{ form_errors(form.prenom) }}
-                        {{ form_widget(form.prenom) }}
-                    </div>
-                      <div class="form-group">
-                        {{ form_label(form.age, 'Age:')}}
-                        {{ form_errors(form.age) }}
-                        {{ form_widget(form.age) }}
-                    </div>
+                      <table class="table">
+                          <tr>
+                              <td>
+                                <div class="form-group">
+                                    {{ form_label(form.nom)}}
+                                    {{ form_errors(form.nom) }}
+                                    {{ form_widget(form.nom) }}
+                                </div>
+                              </td>
+                              <td>
+                                <div class="form-group">
+                                     {{ form_label(form.prenom)}}
+                                     {{ form_errors(form.prenom) }}
+                                     {{ form_widget(form.prenom) }}
+                                 </div>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>
+                                <div class="form-group">
+                                     {{ form_label(form.age)}}
+                                     {{ form_errors(form.age) }}
+                                     {{ form_widget(form.age) }}
+                                 </div>
+                              </td>
+                              <td>
+                                <div class="form-group">
+                                     {{ form_label(form.dateNaiss)}}
+                                     {{ form_errors(form.dateNaiss) }}
+                                     {{ form_widget(form.dateNaiss) }}
+                                 </div>
+                              </td>
+                          </tr>
+                      </table>
                   </fieldset>
+                  <fieldset class="well"><legend class="w3-border w3-margin-top grey-l4" style="padding-left: 10px; border-radius: 10px; font-size: 16px; width: 40%">Cursus</legend>
+                        <div class="form-group">
+                                 {{ form_errors(form.cursus) }}
+                                 {{ form_widget(form.cursus) }}
+                        </div>
+                  </fieldset>
+                  <fieldset class="well"><legend class="w3-border w3-margin-top grey-l4" style="padding-left: 10px; border-radius: 10px; font-size: 16px; width: 40%">Correspondant</legend>
+                     <table class="table">
+                         <tr>
+                             <td>
+                                <div class="form-group">
+                                    {{ form_label(form.correspondant.nom)}}
+                                    {{ form_errors(form.correspondant.nom) }}
+                                    {{ form_widget(form.correspondant.nom) }}
+                                </div>
+                             </td>
+                             <td>
+                                 <div class="form-group">
+                                    {{ form_label(form.correspondant.prenom)}}
+                                    {{ form_errors(form.correspondant.prenom) }}
+                                    {{ form_widget(form.correspondant.prenom) }}
+                                </div>
+                             </td>
+                         </tr>
+                          <tr>
+                             <td>
+                                <div class="form-group">
+                                    {{ form_label(form.correspondant.telephone)}}
+                                    {{ form_errors(form.correspondant.telephone) }}
+                                    {{ form_widget(form.correspondant.telephone) }}
+                                </div>
+                             </td>
+                             <td>
+                                <div class="form-group">
+                                    {{ form_label(form.correspondant.lienParente)}}
+                                    {{ form_errors(form.correspondant.lienParente) }}
+                                    {{ form_widget(form.correspondant.lienParente) }}
+                                </div>
+                             </td>
+                         </tr>
+                         <tr>
+                             <td colspan="2">
+                                <div class="form-group">
+                                    {{ form_label(form.correspondant.email)}}
+                                    {{ form_errors(form.correspondant.email) }}
+                                    {{ form_widget(form.correspondant.email) }}
+                                </div> 
+                             </td>
+                         </tr>
+                     </table>
+                    </fieldset>
                   {{ form_end(form) }}
+                  </fieldset>
                   </div>
                 </div>
         </div>
@@ -34,7 +102,12 @@
           <script>
               $(function(){
                  $('#presentation').hide();
-                 $('#eleve_nom,#eleve_prenom,#eleve_age').addClass('form-control');
+                 $('#eleve_nom,#eleve_prenom,#eleve_age,eleve_cursus,#eleve_dateNaiss').addClass('form-control');
+                 $('#eleve_correspondant_nom,\n\
+                    #eleve_correspondant_prenom,\n\
+                    #eleve_correspondant_telephone,\n\
+                    #eleve_correspondant_email,\n\
+                    #eleve_correspondant_lienParente').addClass('form-control');
               });
           </script>
         {% endblock %}

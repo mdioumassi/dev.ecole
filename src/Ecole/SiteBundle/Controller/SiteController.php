@@ -35,6 +35,7 @@ class SiteController extends Controller {
         $entity = new Eleve();
         $form = $this->createCreateForm($entity);
         $form->handleRequest($request);
+        var_dump($form->isValid());
         if ($form->isValid()) {
             $em = $this->getDoctrine()->getManager();
             $em->persist($entity);

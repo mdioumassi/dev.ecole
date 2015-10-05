@@ -42,6 +42,12 @@ class Eleve
      */
     private $age;
     
+     /**
+     * @var date
+     *
+     * @ORM\Column(name="dateNaiss", type="date")
+     */
+    private $dateNaiss;
     /**
      * @ORM\ManyToOne(targetEntity="Ecole\AdminBundle\Entity\Cursus", cascade={"persist"})
      * @ORM\JoinColumn(nullable=false)
@@ -178,5 +184,28 @@ class Eleve
     public function getCorrespondant()
     {
         return $this->correspondant;
+    }
+
+    /**
+     * Set dateNaiss
+     *
+     * @param \DateTime $dateNaiss
+     * @return Eleve
+     */
+    public function setDateNaiss($dateNaiss)
+    {
+        $this->dateNaiss = $dateNaiss;
+
+        return $this;
+    }
+
+    /**
+     * Get dateNaiss
+     *
+     * @return \DateTime 
+     */
+    public function getDateNaiss()
+    {
+        return $this->dateNaiss;
     }
 }
