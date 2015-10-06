@@ -17,8 +17,8 @@ class EleveType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('nom','text',array('label'=>'Nom Elève :'))
-            ->add('prenom','text',array('label'=>'Prénom Elève :'))
+            ->add('nom','text',array('label'=>'Nom Elève* :'))
+            ->add('prenom','text',array('label'=>'Prénom Elève* :'))
             ->add('age','text',array('label'=>'Age Elève :'))
             ->add('dateNaiss','date',array('label'=>'Date de naissance:'))
             ->add('cursus','entity', array(

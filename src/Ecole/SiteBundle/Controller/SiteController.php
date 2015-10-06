@@ -4,6 +4,7 @@ namespace Ecole\SiteBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Ecole\AdminBundle\Entity\Actualite;
 use Ecole\AdminBundle\Entity\Page;
 use Ecole\AdminBundle\Entity\Eleve;
@@ -35,16 +36,13 @@ class SiteController extends Controller {
         $entity = new Eleve();
         $form = $this->createCreateForm($entity);
         $form->handleRequest($request);
-        var_dump($form->isValid());
         if ($form->isValid()) {
             $em = $this->getDoctrine()->getManager();
             $em->persist($entity);
             $em->flush();
+            $this->get('session')->getFlashBag()->add('info', 'la pré-inscription a été enregistré. Nous vous contacterons pour sa finalisation. Merci!');
         }
-    return $this->render('EcoleSiteBundle:Site:index.html.twig', array(
-                'actualite' => $this->getActualite(),
-
-    ));
+        return $this->preinscripionAction();
     }
   public function actualiteAction() {
     return $this->render('EcoleSiteBundle:Site:actualite.html.twig', array(

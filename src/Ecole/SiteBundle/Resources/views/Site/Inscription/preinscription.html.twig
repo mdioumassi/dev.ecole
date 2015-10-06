@@ -4,6 +4,14 @@
             <div class="col-sm-12">
                <h4 class="titreM yellow"><span class="glyphicon glyphicon-tags"></span>&nbsp;Pré-inscription</h4>
                 <div id="contenu" class="w3-card-2">
+                    <p>
+                        {# On affiche tous les messages flash dont le nom est « info » #}
+                        {% for message in app.session.flashbag.get('info') %}
+                            <div class="alert alert-success">
+                          <p>{{ message }}</p>
+                            </div>
+                        {% endfor %}
+                      </p>
                   <fieldset class="well"><legend class="w3-border w3-margin-top grey-l4" style="padding-left: 10px; border-radius: 10px; font-size: 16px; width: 60%,text-transform: upp">Fiche d'inscription 2015 - 2016</legend>
                   {{ form_start(form) }}
                   <fieldset class="well"><legend class="w3-border w3-margin-top grey-l4" style="padding-left: 10px; border-radius: 10px; font-size: 16px; width: 40%">Elève</legend>
