@@ -20,7 +20,10 @@ class EleveType extends AbstractType
             ->add('nom','text',array('label'=>'Nom Elève* :'))
             ->add('prenom','text',array('label'=>'Prénom Elève* :'))
             ->add('age','text',array('label'=>'Age Elève :'))
-            ->add('dateNaiss','date',array('label'=>'Date de naissance:'))
+            ->add('dateNaiss','date',array('label'=>'Date de naissance:',
+                                            'required' => false,
+                                            'widget' =>'single_text',
+                                            'format' =>'dd/MM/yyyy'))
             ->add('cursus','entity', array(
                   'class'    => 'EcoleAdminBundle:Cursus',
                   'property' => 'nom',
