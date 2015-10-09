@@ -1,0 +1,33 @@
+{% extends "EcoleSiteBundle::layout.html.twig" %}
+   {% block  content %}
+      <div class="row">
+        <div class="col-sm-12"> 
+            <h4 class="titreM green">Présentation</h4>
+            <div id="contenu">
+                <div class="w3-container">
+                  {% for contenu in contenus %}
+                    {% if contenu.type == 'presentation' %}
+                        {{ contenu.contenu|raw }}
+                    {% endif %}
+                  {% endfor %}
+                </div>
+            </div>
+        </div> 
+      </div> 
+        {% block javascript %}     
+          <script>
+              $(function(){
+                 $('#notrecole').addClass('active');
+                 $('#home').removeClass('active');
+                 $('#present').addClass('yellow');
+                 $('#reseaux').hide();
+                  $('#collapseOne').collapse();
+                  $('#menupresent').css("color","red");
+              });
+          </script>
+        {% endblock %}
+   {% endblock %}  
+
+ 
+     
+

@@ -1,0 +1,81 @@
+{% extends "EcoleSiteBundle::layout.html.twig" %}
+    {% block  content %}
+          <div class="row">
+            <div class="col-sm-12">
+               <h4 class="titreM red"><span class="glyphicon glyphicon-tags"></span>&nbsp;ACTUALITES</h4>
+               <div id="contenu" style="border-color:red;">
+                {% for actu in actualite %}
+                  <div class="w3-container w3-card-2">
+                      <p class="red" style="border:1px solid red;margin-left: -16px; padding: 10px; width:106% ">{{ actu.titre }} <span style="float: right">Publié le :{{ actu.timestamp|date("d/m/Y") }}<span></p> 
+                      <p>{{ actu.contenu|raw  }}</p>
+                  </div><br>
+                {% endfor%} 
+               </div><br>
+                <h4 class="titreM green w3-card-2"> <span class="glyphicon glyphicon-tags"></span> &nbsp;&nbsp;La Cellule du Savoir</h4>
+                 <div id="contenu" class="w3-card-2">
+                  <div class="w3-container">
+                    <p>
+                        Créee en Juillet 2012 par Arrêté Ministériel N° 1430 du 02 juillet 2012, l’Ecole Privée « Cellule du savoir » est un complexe scolaire  qui regroupe:
+                    <ul>
+                    <li>un jardin d’enfants (enseignement préscolaire), comportant une crèche, une petite section, une moyenne section et une grande section ;</li>
+                    <li>   une école fondamentale à cycle complet (enseignement de base)</li>
+                    <li>    une école secondaire comportant un 1er cycle et un 2eme cycle (collège et lycée).</li>
+                    </ul>   
+                    Elle est implantée à Nouakchott, dans la commune de Sebkha, à Basra sur l’axe goudronné entre Etage Kassé et l’arrivage Basra. <a href="{{path('ecole_site_presentation')}}">Lire la suite ...</a>                   </p>
+                  </div>
+                </div>
+            </div>
+        </div><br>
+         <!-- <div class="row">
+            <div class="col-sm-12">
+                <h4 class="titreM green w3-card-2"> <span class="glyphicon glyphicon-tags"></span> &nbsp;&nbsp;Projet Educatif</h4>
+                 <div id="contenu" class="w3-card-2">
+                    <div class="w3-container">
+                    <p>
+                        A car is a wheeled, self-powered motor vehicle used for transportation.
+                        Most definitions of the term specify that cars are designed to run primarily on roads,
+                        to have seating for one to eight people, to typically have for one to eight people,
+                        to typically have four wheels. (Wikipedia)
+                    </p>
+                  </div>
+                </div>
+            </div>
+        </div><br>-->
+        <h4 class="titreM green w3-card-2"> <span class="glyphicon glyphicon-tags"></span> &nbsp;&nbsp;Notre Ecole</h4>
+          <div class="row w3-card-2" id="contenu">
+            <div class="col-sm-4">
+                <h4 class="titreMenu orange">Cellule'Primaire</h4>
+                 <div id="contenuBlok" style="border-color: orange;padding-bottom: 15px;">
+                     <div class="w3-card-2">
+                        <a href="{{path('ecole_primaire')}}"><img src="{{asset('bundles/ecolesite/images/primaire.png')}}" alt="Le primaire" style="width:100%"></a>
+                    </div>
+                 </div>
+            </div> 
+            <div class="col-sm-4">
+                <h4 class="titreMenu light-green">Cellule'Collège</h4>
+                 <div id="contenuBlok" style="border-color: teal; padding-bottom: 15px;">
+                    <div class="w3-card-2">
+                        <a href="{{path('ecole_college')}}"><img src="{{asset('bundles/ecolesite/images/college.png')}}" alt="Le collège" style="width:100%"></a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-sm-4">
+                <h4 class="titreMenu teal-l2">Cellule'Lycée</h4>
+                 <div id="contenuBlok" style="border-color: teal; padding-bottom: 15px;">
+                     <div class="w3-card-2">
+                         <a href="{{path('ecole_lycee')}}"><img src="{{asset('bundles/ecolesite/images/lycee.png')}}" alt="Le lycée" style="width:100%;border-top-right-radius: 15px"></a>
+                    </div>
+                 </div>
+            </div>
+          </div>
+        {% block javascript %}     
+          <script>
+              $(function(){
+                 $('#presentation').hide();
+              });
+          </script>
+        {% endblock %}
+   {% endblock %}
+    
+
+  

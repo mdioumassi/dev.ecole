@@ -1,0 +1,39 @@
+{% extends "EcoleSiteBundle::layout.html.twig" %}
+ 
+   {% block  content %}
+      <div class="row">
+        <div class="col-sm-12"> 
+            <h4 class="titreM teal-l2">Lycée</h4>
+            <div id="contenu" style="border-color: teal">
+               <div class="w3-container">
+                   <ul class="nav nav-tabs nav-justified">
+                    <li class="active"><a href="">Etude dirigées</a></li>
+                    <li><a href="">Etude surveillées</a></li>
+                  </ul>
+                  <div class="tab-content w3-border-bottom w3-border-left w3-border-right blanc">
+                    <div class="w3-container">
+                        {% for contenu in contenus %}
+                            {% if contenu.type == 'lycee' %}
+                                {{ contenu.contenu|raw }}
+                            {% endif %}
+                         {% endfor %}
+                    </div>
+                 </div>
+               </div>
+            </div>
+        </div> 
+      </div>    
+        {% block javascript %}     
+          <script>
+              $(function(){
+                 $('#notrecole').addClass('active');
+                 $('#home').removeClass('active');
+                  $('#lycee').addClass('yellow');
+                  $('#reseaux').hide();
+              });
+          </script>
+        {% endblock %}
+   {% endblock %}  
+   
+
+

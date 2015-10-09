@@ -1,0 +1,27 @@
+ecole_site_homepage:
+    path:     /
+    defaults: { _controller: EcoleAdminBundle:Admin:index }
+    
+ecole_site_actualite:
+    path:     /admin/actualite
+    defaults: { _controller: EcoleAdminBundle:Admin:actualite }
+    
+ecole_site_contact:
+    path:     /admin/contact
+    defaults: { _controller: EcoleSiteBundle:Site:contact }
+
+ecole_site_presentation:
+    path:     /admin/presentation
+    defaults: { _controller: EcoleSiteBundle:Site:presentation }
+
+ecole_site_pedagogie:
+    path:     /admin/pedagogie
+    defaults: { _controller: EcoleSiteBundle:Site:pedagogie }
+
+ecole_pedagogie_surveille:
+    path:     /pedagogie/surveille
+    defaults: { _controller: EcoleSiteBundle:Site:surveille }
+
+ecole_site_stat:
+    path:     /stat
+    defaults: { _controller: EcoleSiteBundle:Site:stat}

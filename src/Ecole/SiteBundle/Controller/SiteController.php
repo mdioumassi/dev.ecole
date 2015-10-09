@@ -133,7 +133,7 @@ class SiteController extends Controller {
     return $em->getRepository('EcoleAdminBundle:Page')->findAll();
   }
 
-  private function getActualite() {
+  public function getActualite() {
     $em = $this->getDoctrine()->getEntityManager();
     $query = $em->createQuery(
                     'SELECT a FROM EcoleAdminBundle:Actualite a
@@ -144,7 +144,7 @@ class SiteController extends Controller {
     return $query->getResult();
   }
 
-  private function getAllActualite() {
+  public function getAllActualite() {
     $em = $this->getDoctrine()->getEntityManager();
     $query = $em->createQuery(
             'SELECT a FROM EcoleAdminBundle:Actualite a
